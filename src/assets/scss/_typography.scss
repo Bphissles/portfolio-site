@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'anybody-semi-bold';
+  src: url('../fonts/Anybody/Anybody-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'anybody-semi-bold-italic';
+  src: url('../fonts/Anybody/Anybody-SemiBoldItalic.ttf');
+}
+@font-face {
+  font-family: 'anybody-light';
+  src: url('../fonts/Anybody/Anybody-Light.ttf');
+}
+
+@font-face {
+  font-family: 'space-mono-regular';
+  src: url('../fonts/Space_Mono/SpaceMono-Regular.ttf');
+}
+@font-face {
+  font-family: 'space-mono-regular-italic';
+  src: url('../fonts/Space_Mono/SpaceMono-Italic.ttf');
+}
+@font-face {
+  font-family: 'space-mono-bold';
+  src: url('../fonts/Space_Mono/SpaceMono-Bold.ttf');
+}
+@font-face {
+  font-family: 'space-mono-bold-italic';
+  src: url('../fonts/Space_Mono/SpaceMono-BoldItalic.ttf');
+}
+
+
+.heading-01 {
+  font-family: 'anybody-semi-bold', sans-serif;
+  letter-spacing: -0.01em;
+  font-size: 60px;
+  line-height: 60px;
+
+  @media (min-width: 992px) {
+    font-size: 76px;
+    line-height: 70px;
+  }
+}
+
+.heading-02 {
+  font-family: 'anybody-light', sans-serif;
+  letter-spacing: -0.01em;
+  font-size: 34px;
+  line-height: 40px;
+
+  @media (min-width: 992px) {
+    font-size: 42px;
+    line-height: 54px;
+  }
+}
+
+.heading-03 {
+  // bold is the default
+  font-family: 'anybody-semi-bold', sans-serif;
+  letter-spacing: -0.02em;
+  font-size: 20px;
+  line-height: 24px;
+
+  &.underline {
+    font-family: 'anybody-semi-bold-italic';
+    text-decoration: underline;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 28px;
+    line-height: 34px;
+
+    &.light {
+      font-family: 'anybody-light', sans-serif;
+    }
+  }
+}
+
+p {
+  font-family: 'space-mono-regular', serif;
+  letter-spacing: -0.01em;
+  font-size: 16px;
+  line-height: 21px;
+
+  &.italic {
+    font-family: 'space-mono-regular-italic', serif;
+    letter-spacing: 0.005em;
+  }
+
+  &.underline {
+    text-decoration: underline;
+    letter-spacing: 0.005em;
+  }
+
+  &.bold {
+    font-family: 'space-mono-bold', serif;
+    letter-spacing: 0.005em;
+
+    &.italic {
+      font-family: 'space-mono-bold-italic', serif;
+    }
+  
+    &.underline {
+      text-decoration: underline;
+    }
+  }
+}
+
+//icons
+// I hate this arrow
+.arrow {
+  background-image: url('../icons/arrow.png');
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
