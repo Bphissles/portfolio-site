@@ -1,6 +1,5 @@
 <template>
   <main>
-    {{hello}}
     <div class="font-wrap">
       <h1 class="heading-01">{{hello}}</h1>
       <h2 class="heading-02">{{hello}}</h2>

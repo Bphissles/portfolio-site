@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: 'anybody-light';
-  src: url('../fonts/Anybody/Anybody-Light.ttf');
+  src: url('../fonts/Anybody/Anybody-ExtraLight.ttf');
 }
 
 @font-face {
@@ -28,12 +28,16 @@
   src: url('../fonts/Space_Mono/SpaceMono-BoldItalic.ttf');
 }
 
+h1,h2,h3,h4,h5,h6,p {
+  margin-top: 0;
+}
 
 .heading-01 {
   font-family: 'anybody-semi-bold', sans-serif;
   letter-spacing: -0.01em;
   font-size: 60px;
   line-height: 60px;
+  margin-bottom: 26px;
 
   @media (min-width: 992px) {
     font-size: 76px;
@@ -62,7 +66,6 @@
 
   &.underline {
     font-family: 'anybody-semi-bold-italic';
-    text-decoration: underline;
   }
 
   @media (min-width: 992px) {
@@ -72,12 +75,17 @@
     &.light {
       font-family: 'anybody-light', sans-serif;
     }
+
+    &.underline {
+      text-decoration: underline;
+    }
   }
 }
 
 p {
   font-family: 'space-mono-regular', serif;
   letter-spacing: -0.01em;
+  margin-top: 0;
   font-size: 16px;
   line-height: 21px;
 
@@ -103,16 +111,34 @@ p {
       text-decoration: underline;
     }
   }
+
+  span {
+    &.bold {
+      font-family: 'space-mono-bold', serif;
+      letter-spacing: 0.005em;
+    }
+  }
 }
 
-//icons
+.green {
+  color: $accent-green;
+}
+.blue {
+  color: $accent-blue;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+// icons
 // I hate this arrow
 .arrow {
-  background-image: url('../icons/arrow.png');
+  background-image: url('../icons/arrow.svg');
   background-position: center center;
   background-size: cover;
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 8px;
+  height: 8px;
 }
 

@@ -1,0 +1,55 @@
+body {
+  position: relative;
+  background-color: $neutral-900;
+  color: $neutral-300;
+
+  height: 100px;
+
+  a {
+    color: $neutral-300;
+    &:hover {
+      text-decoration: none;
+      color: $accent-blue;
+    }
+  }
+
+  .wrapper {
+    padding-inline: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: 640px) {
+    padding-inline: 55px;
+    .wrapper {
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 100px;
+    margin-left: 153px;
+    padding-inline: 30px;
+  }
+
+  @media (min-width: 992px) {
+    padding-top: 200px;
+    margin-left: 181px;
+    padding-left: 30px;
+    padding-right: 55px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-left: 155px;
+    padding-left: 100px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 180px;
+    padding-right: 135px;
+  }
+
+  @media (min-width: 1900px) {
+    padding-left: 420px;
+    padding-right: 375px;
+  }
+}
