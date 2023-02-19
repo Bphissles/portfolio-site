@@ -1,28 +1,49 @@
 <script setup>
-  import Heading from "../components/Heading.vue"
-  import ProjectPreviewCard from "../components/ProjectPreviewCard.vue"
-  import TileContainer from "../components/TileContainer.vue";
+import Heading from "../components/Heading.vue";
+import ProjectPreviewCard from "../components/ProjectPreviewCard.vue";
+import TileContainer from "../components/TileContainer.vue";
 </script>
 
 <template>
   <main>
     <div class="wrapper">
       <ul>
-        <li class="blue"><p style="margin-bottom: 0">animation treatment</p></li>
-        <li class="blue"><p style="margin-bottom: 0">setup active states on all links</p></li>
-        <li class="blue"><p style="margin-bottom: 0">make sure all links are setup</p></li>
+        <li class="blue">
+          <p style="margin-bottom: 0">animation treatment</p>
+        </li>
+        <li class="blue">
+          <p style="margin-bottom: 0">setup active states on all links</p>
+        </li>
+        <li class="blue">
+          <p style="margin-bottom: 0">make sure all links are setup</p>
+        </li>
         <li class="blue"><p style="margin-bottom: 0">build preview page</p></li>
         <li class="blue"><p style="margin-bottom: 0">build resume page</p></li>
-        <li class="blue"><p style="margin-bottom: 0">build resume components</p></li>
+        <li class="blue">
+          <p style="margin-bottom: 0">build resume components</p>
+        </li>
         <li class="blue"><p style="margin-bottom: 0">build contact page</p></li>
         <li class="blue"><p style="margin-bottom: 0">more .......</p></li>
       </ul>
-      <Heading projectName="" heading="Yo, my name is Benjamin Hislop." subHeading="I code cool things."/>
-      
-      <ProjectPreviewCard :totalProjectCount="totalProjectCount" :cardData="tempObject" />
-      <ProjectPreviewCard :totalProjectCount="totalProjectCount" :cardData="tempObject2" />
-      <ProjectPreviewCard :totalProjectCount="totalProjectCount" :cardData="tempObject3" />
-      <TileContainer heading="More Cool Things."/>
+      <Heading
+        projectName=""
+        heading="Yo, my name is Benjamin Hislop."
+        subHeading="I code cool things."
+      />
+
+      <ProjectPreviewCard
+        :totalProjectCount="totalProjectCount"
+        :cardData="tempObject"
+      />
+      <ProjectPreviewCard
+        :totalProjectCount="totalProjectCount"
+        :cardData="tempObject2"
+      />
+      <ProjectPreviewCard
+        :totalProjectCount="totalProjectCount"
+        :cardData="tempObject3"
+      />
+      <TileContainer heading="More Cool Things." />
     </div>
   </main>
 </template>
@@ -36,7 +57,8 @@ export default {
       tempObject: {
         projectIndex: 1,
         title: "Mopar Dealer Site",
-        summary:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        summary:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         comment: "something witty",
         projectDetails: {
           client: "Mopar",
@@ -50,7 +72,8 @@ export default {
       tempObject2: {
         projectIndex: 2,
         title: "Mopar Dealer Site",
-        summary:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        summary:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         comment: "something witty",
         projectDetails: {
           client: "Mopar",
@@ -64,7 +87,8 @@ export default {
       tempObject3: {
         projectIndex: 3,
         title: "Mopar Dealer Site",
-        summary:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        summary:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         comment: "something witty",
         projectDetails: {
           client: "Mopar",
@@ -85,9 +109,15 @@ export default {
   },
   mounted() {
     this.totalProjectCount = this.numberFormatter(this.totalProjectCount);
-    this.tempObject.projectIndex = this.numberFormatter(this.tempObject.projectIndex);
-    this.tempObject2.projectIndex = this.numberFormatter(this.tempObject2.projectIndex);
-    this.tempObject3.projectIndex = this.numberFormatter(this.tempObject3.projectIndex);
+    this.tempObject.projectIndex = this.numberFormatter(
+      this.tempObject.projectIndex
+    );
+    this.tempObject2.projectIndex = this.numberFormatter(
+      this.tempObject2.projectIndex
+    );
+    this.tempObject3.projectIndex = this.numberFormatter(
+      this.tempObject3.projectIndex
+    );
   },
 };
 </script>

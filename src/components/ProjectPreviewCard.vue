@@ -1,39 +1,57 @@
 <script setup>
-  import Comment from "../components/Comment.vue";
-  import Breadcrumbs from "../components/Breadcrumbs.vue";
-  import ImageLarge from "../components/ImageLarge.vue"
+import Comment from "../components/Comment.vue";
+import Breadcrumbs from "../components/Breadcrumbs.vue";
+import ImageLarge from "../components/ImageLarge.vue";
 </script>
 
 <template>
-  <article :class="'card project' + cardData.projectIndex"> <!-- ?depending on strategy this class may go away -->
+  <article :class="'card project' + cardData.projectIndex">
+    <!-- ?depending on strategy this class may go away -->
     <div class="top">
-      <Breadcrumbs :projectIndex="cardData.projectIndex" :totalCount="totalProjectCount" />
-      <Comment class="comment"  :comment="cardData.comment" />
+      <Breadcrumbs
+        :projectIndex="cardData.projectIndex"
+        :totalCount="totalProjectCount"
+      />
+      <Comment class="comment" :comment="cardData.comment" />
     </div>
-    <ImageLarge :image="cardData.projectDetails.image" :altText="cardData.projectDetails.altText"/>
+    <ImageLarge
+      :image="cardData.projectDetails.image"
+      :altText="cardData.projectDetails.altText"
+    />
 
     <div class="bottom">
       <div class="summary">
         <h1 class="heading-03 underline">{{ cardData.title }}</h1>
         <p>{{ cardData.summary }}</p>
-        <p><span class="bold">Technology: </span> {{ cardData.projectDetails.software }}</p>
+        <p>
+          <span class="bold">Technology: </span>
+          {{ cardData.projectDetails.software }}
+        </p>
       </div>
 
       <div class="details">
-        <p><span class="bold uppercase">Client </span> - {{ cardData.projectDetails.client }} </p>
-        <p><span class="bold uppercase">Role </span> - {{ cardData.projectDetails.role }} </p>
-        <p><span class="bold uppercase">Date </span> - {{ cardData.projectDetails.date }}</p>
+        <p>
+          <span class="bold uppercase">Client </span> -
+          {{ cardData.projectDetails.client }}
+        </p>
+        <p>
+          <span class="bold uppercase">Role </span> -
+          {{ cardData.projectDetails.role }}
+        </p>
+        <p>
+          <span class="bold uppercase">Date </span> -
+          {{ cardData.projectDetails.date }}
+        </p>
       </div>
     </div>
-
   </article>
 </template>
 
 <script>
 export default {
-  name: 'project-preview-card',
-  props: ['totalProjectCount', 'cardData'],
-}
+  name: "project-preview-card",
+  props: ["totalProjectCount", "cardData"],
+};
 </script>
 
 <style lang="scss" scoped>
@@ -55,7 +73,7 @@ export default {
       }
     }
   }
-  
+
   @media (min-width: 640px) {
     margin-bottom: 48px;
     .details {

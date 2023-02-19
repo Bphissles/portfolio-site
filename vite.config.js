@@ -9,9 +9,9 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       sass: {
-        additionalData: `@import "@/assets/scss/theme.scss";`
-      }
-    }
+        additionalData: `@import "@/assets/scss/theme.scss";`,
+      },
+    },
   },
   resolve: {
     alias: {

@@ -1,18 +1,24 @@
 <script setup>
-  import { RouterLink } from "vue-router";
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
   <nav id="main-nav">
     <RouterLink to="/">
-      <img src="../assets/images/system/logo.png" alt="Ben Hislop">
+      <img src="../assets/images/system/logo.png" alt="Ben Hislop" />
     </RouterLink>
     <div class="nav-links">
-      <p class=""><RouterLink to="/">Projects</RouterLink>  <i class="arrow"></i></p>
-      <p class=""><RouterLink to="/style-guide">About</RouterLink> <i class="arrow"></i></p>
-      <p class=""><RouterLink to="/style-guide">Contact</RouterLink> <i class="arrow"></i></p>
+      <p class="">
+        <RouterLink to="/">Projects</RouterLink> <i class="arrow"></i>
+      </p>
+      <p class="">
+        <RouterLink to="/style-guide">About</RouterLink> <i class="arrow"></i>
+      </p>
+      <p class="">
+        <RouterLink to="/style-guide">Contact</RouterLink> <i class="arrow"></i>
+      </p>
     </div>
-  </nav>  
+  </nav>
 </template>
 
 <style lang="scss" scoped>
@@ -56,7 +62,7 @@
     padding: 60px 26px 60px 55px;
     height: calc(100vh - 120px);
   }
-  
+
   @media (min-width: 1200px) {
     padding: 60px 0px 60px 55px;
   }

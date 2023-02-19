@@ -3,11 +3,10 @@
 </template>
 
 <script>
-
 export default {
-  name: 'comment',
+  name: "comment",
   props: {
     comment: String,
   },
-}
+};
 </script>

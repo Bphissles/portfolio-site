@@ -1,19 +1,19 @@
 <script setup>
-  import Comment from './Comment.vue';
-  import SecondaryPreviewCard from './SecondaryPreviewCard.vue';
+import Comment from "./Comment.vue";
+import SecondaryPreviewCard from "./SecondaryPreviewCard.vue";
 </script>
 <template>
   <section class="tile-container">
     <h2 class="heading-02">{{ heading }}</h2>
     <div class="tiles">
-      <SecondaryPreviewCard/>
-      <SecondaryPreviewCard/>
-      <SecondaryPreviewCard/>
-      <SecondaryPreviewCard/>
-      <SecondaryPreviewCard/>
-      <SecondaryPreviewCard/>
+      <SecondaryPreviewCard />
+      <SecondaryPreviewCard />
+      <SecondaryPreviewCard />
+      <SecondaryPreviewCard />
+      <SecondaryPreviewCard />
+      <SecondaryPreviewCard />
     </div>
-    <Comment  class="comment"  comment="Space for another comment"/>
+    <Comment class="comment" comment="Space for another comment" />
   </section>
 </template>
 
@@ -21,8 +21,8 @@
 export default {
   name: "tile-container",
   props: ["heading"],
-  components: { SecondaryPreviewCard }
-}
+  components: { SecondaryPreviewCard },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -34,7 +34,6 @@ export default {
     justify-content: space-between;
     .card {
       flex: 0 0 47%;
-
     }
   }
 
@@ -42,13 +41,13 @@ export default {
     text-align: end;
   }
 
-  @media(min-width: 640px) {
+  @media (min-width: 640px) {
     margin-top: 12px;
   }
-  @media(min-width: 640px) {
+  @media (min-width: 640px) {
     margin-top: 8px;
   }
-  @media(min-width: 992px) {
+  @media (min-width: 992px) {
     margin-top: 28px;
   }
 
