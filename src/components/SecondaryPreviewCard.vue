@@ -1,38 +1,35 @@
 <template>
   <div class="card">
-    <img src="https://via.placeholder.com/500.png" alt="something lovely" />
-    <span
-      ><p class="heading-03 underline">Luxwall</p>
-      <i class="arrow"></i
-    ></span>
+    <img src="https://via.placeholder.com/500.png" alt="something lovely">
+    <span><p class="heading-03 underline">Luxwall</p>  <i class="arrow"></i></span>
   </div>
 </template>
 
 <script>
 export default {
-  name: "secondary-preview-card",
-};
+  name: 'secondary-preview-card',
+}
 </script>
 
 <style lang="scss" scoped>
-.card {
-  margin-bottom: 24px;
-  img {
-    width: 100%;
-    border-radius: 18px;
-    margin-bottom: 12px;
-  }
-  span {
-    display: flex;
-    align-items: center;
-    p {
-      margin: 0;
+  .card {
+    margin-bottom: 24px;
+    img {
+      width: 100%;
+      border-radius: 18px;
+      margin-bottom: 12px;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      p {
+        margin: 0;
+      }
+    }
+    .arrow {
+      margin-left: 12px;
+      width: 16px;
+      height: 16px;
     }
   }
-  .arrow {
-    margin-left: 12px;
-    width: 16px;
-    height: 16px;
-  }
-}
 </style>

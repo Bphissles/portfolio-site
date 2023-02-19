@@ -9,7 +9,7 @@ import { RouterLink } from "vue-router";
     </RouterLink>
     <div class="nav-links">
       <p class="">
-        <RouterLink to="/">Projects</RouterLink> <i class="arrow"></i>
+        <RouterLink to="/project">Projects</RouterLink> <i class="arrow"></i>
       </p>
       <p class="">
         <RouterLink to="/style-guide">About</RouterLink> <i class="arrow"></i>

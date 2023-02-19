@@ -1,4 +1,5 @@
 <script setup>
+import { onMounted } from "vue";
 import Comment from "./Comment.vue";
 import SecondaryPreviewCard from "./SecondaryPreviewCard.vue";
 </script>
@@ -6,12 +7,7 @@ import SecondaryPreviewCard from "./SecondaryPreviewCard.vue";
   <section class="tile-container">
     <h2 class="heading-02">{{ heading }}</h2>
     <div class="tiles">
-      <SecondaryPreviewCard />
-      <SecondaryPreviewCard />
-      <SecondaryPreviewCard />
-      <SecondaryPreviewCard />
-      <SecondaryPreviewCard />
-      <SecondaryPreviewCard />
+      <SecondaryPreviewCard v-for="card in cardCount" />
     </div>
     <Comment class="comment" comment="Space for another comment" />
   </section>
@@ -20,8 +16,14 @@ import SecondaryPreviewCard from "./SecondaryPreviewCard.vue";
 <script>
 export default {
   name: "tile-container",
-  props: ["heading"],
+  props: ["heading", "cardCount"],
   components: { SecondaryPreviewCard },
+  data() {
+    return {}
+  },
+  Mounted() {
+    
+  }
 };
 </script>
 
