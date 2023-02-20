@@ -12,7 +12,7 @@ import { RouterLink } from "vue-router";
         <RouterLink to="/project">Projects</RouterLink> <i class="arrow"></i>
       </p>
       <p class="">
-        <RouterLink to="/style-guide">About</RouterLink> <i class="arrow"></i>
+        <RouterLink to="/about">About</RouterLink> <i class="arrow"></i>
       </p>
       <p class="">
         <RouterLink to="/style-guide">Contact</RouterLink> <i class="arrow"></i>

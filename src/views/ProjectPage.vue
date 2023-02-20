@@ -8,9 +8,7 @@
   <main>
     <div class="wrapper">
       <Heading :projectName="tempObject.projectDetails.client" :heading="tempObject.title" subHeading="Website Redesign"/>
-      
       <ProjectIntroCard :totalProjectCount="totalProjectCount" :cardData="tempObject" />
-
       <TileContainer heading="More Cool Things." :cardCount="extraCardTemp"/>
     </div>
   </main>
@@ -33,7 +31,7 @@ export default {
           role: "Front End Developer",
           date: "2019 to present",
           software: "Vue.js, jQuery, dotCMS, Angular",
-          image: "https://via.placeholder.com/555x345.png",
+          image: "https://placekitten.com/555/345",
           altText: "some kind of description",
         },
       },

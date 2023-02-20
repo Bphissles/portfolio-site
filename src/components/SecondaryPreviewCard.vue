@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <img src="https://via.placeholder.com/500.png" alt="something lovely">
+    <img src="https://placekitten.com/500" alt="something lovely">
     <span><p class="heading-03 underline">Luxwall</p>  <i class="arrow"></i></span>
   </div>
 </template>

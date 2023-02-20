@@ -1,7 +1,6 @@
 <script setup>
-import { onMounted } from "vue";
-import Comment from "./Comment.vue";
-import SecondaryPreviewCard from "./SecondaryPreviewCard.vue";
+  import Comment from "./Comment.vue";
+  import SecondaryPreviewCard from "./SecondaryPreviewCard.vue";
 </script>
 <template>
   <section class="tile-container">
