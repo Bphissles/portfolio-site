@@ -1,0 +1,13 @@
+.shadow-pop-bl {
+	animation: shadow-pop-bl 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+@keyframes shadow-pop-bl {
+  0% {
+    box-shadow: 0 0 #50FA7B, 0 0 #50FA7B, 0 0 #50FA7B, 0 0 #50FA7B, 0 0 #50FA7B, 0 0 #50FA7B, 0 0 #50FA7B, 0 0 #50FA7B;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    box-shadow: -1px 1px #50FA7B, -2px 2px #50FA7B, -3px 3px #50FA7B, -4px 4px #50FA7B, -5px 5px #50FA7B, -6px 6px #50FA7B, -7px 7px #50FA7B, -8px 8px #50FA7B;
+    transform: translateX(8px) translateY(-8px);
+  }
+}
