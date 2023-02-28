@@ -1,7 +1,7 @@
 <script setup>
-  import Heading from "../components/Heading.vue"
-  import ProjectPreviewCard from "../components/ProjectPreviewCard.vue"
-  import TileContainer from "../components/TileContainer.vue";
+  import Heading from "@/components/Heading.vue"
+  import ProjectPreviewCard from "@/components/ProjectPreviewCard.vue"
+  import TileContainer from "@/components/TileContainer.vue";
 </script>
 
 <template>

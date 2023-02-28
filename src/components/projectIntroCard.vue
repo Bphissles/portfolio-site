@@ -1,7 +1,7 @@
 <script setup>
-  import Comment from "../components/Comment.vue";
-  import Breadcrumbs from "../components/Breadcrumbs.vue";
-  import ImageLarge from "../components/ImageLarge.vue"
+  import Comment from "@/components/Comment.vue";
+  import Breadcrumbs from "@/components/Breadcrumbs.vue";
+  import ImageLarge from "@/components/ImageLarge.vue"
 </script>
 
 <template>
