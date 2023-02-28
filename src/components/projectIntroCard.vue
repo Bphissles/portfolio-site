@@ -30,7 +30,6 @@
 
 <script>
 export default {
-  name: 'project-intro-card',
   props: ['totalProjectCount', 'cardData'],
 }
 </script>

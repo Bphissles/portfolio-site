@@ -14,6 +14,19 @@
       <br>
       <br>
       <h1 class="blue heading-01">resume body todo</h1>
+      
+      <p class="bold">netlify form test</p>
+      <form name="contact" netlify>
+        <p>
+          <label>Name <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Email <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
       <br>
       <br>
       <br>

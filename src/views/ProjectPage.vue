@@ -2,7 +2,7 @@
   <main>
     <div class="wrapper">
       <Heading :projectName="tempObject.projectDetails.client" :heading="tempObject.title" subHeading="Website Redesign"/>
-      <!-- <ProjectIntroCard :totalProjectCount="totalProjectCount" :cardData="tempObject" /> -->
+      <ProjectIntroCard :totalProjectCount="totalProjectCount" :cardData="tempObject" />
       <TileContainer heading="More Cool Things." :cardCount="extraCardTemp"/>
     </div>
   </main>
@@ -10,11 +10,11 @@
 
 <script>
 import Heading from "@/components/Heading.vue"
-// import ProjectIntroCard from "@/components/ProjectIntroCard.vue"
+import ProjectIntroCard from "@/components/ProjectIntroCard.vue"
 import TileContainer from "@/components/TileContainer.vue";
 
 export default {
-  components: { Heading,  TileContainer },
+  components: { Heading, ProjectIntroCard, TileContainer },
   data() {
     return {
       extraCardTemp: 3,
