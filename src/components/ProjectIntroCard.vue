@@ -23,7 +23,7 @@
         <p><span class="bold uppercase">Role </span> - {{ cardData.projectDetails.role }} </p>
         <p><span class="bold uppercase">Date </span> - {{ cardData.projectDetails.date }}</p>
       </div>
-    </div>
+    </div> 
 
   </article>
 </template>
