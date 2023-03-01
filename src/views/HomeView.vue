@@ -7,7 +7,7 @@
 <template>
   <main>
     <div class="wrapper">
-      <ul>
+      <!-- <ul>
         <li class="blue"><p style="margin-bottom: 0">animation treatment</p></li>
         <li class="blue"><p style="margin-bottom: 0">menu clipping when using touch screen</p></li>
         <li class="blue"><p style="margin-bottom: 0">setup active states on all links</p></li>
@@ -17,7 +17,7 @@
         <li class="blue"><p style="margin-bottom: 0">build resume components</p></li>
         <li class="blue"><p style="margin-bottom: 0">build contact page</p></li>
         <li class="blue"><p style="margin-bottom: 0">more .......</p></li>
-      </ul>
+      </ul> -->
       <Heading projectName="" heading="Yo, my name is Benjamin Hislop." subHeading="I code cool things."/>
       <ProjectPreviewCard :totalProjectCount="totalProjectCount" :cardData="tempObject" />
       <ProjectPreviewCard :totalProjectCount="totalProjectCount" :cardData="tempObject2" />
