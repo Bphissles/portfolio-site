@@ -2,6 +2,7 @@
   import Heading from "@/components/Heading.vue"
   import HeadingWithCopy from "@/components/HeadingWithCopy.vue";
   import TileContainer from "@/components/TileContainer.vue";
+  import ContactForm from "../components/ContactForm.vue";
 </script>
 
 <template>
@@ -12,21 +13,7 @@
 
       <!-- contact container -->
 
-      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact" />
-        <p>
-          <label>Your Name: <input type="text" name="name" /></label>
-        </p>
-        <p>
-          <label>Your Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
-          <label>Message: <textarea name="message"></textarea></label>
-        </p>
-        <p>
-          <button>Send</button>
-        </p>
-      </form>
+      <ContactForm />
 
       <TileContainer heading="More Cool Things." :cardCount="extraCardTemp" />
     </div>
@@ -35,7 +22,7 @@
 
 <script>
   export default {
-  components: { Heading, TileContainer, HeadingWithCopy },
+  components: { Heading, TileContainer, HeadingWithCopy, ContactForm },
   data() {
       return {
         extraCardTemp:3
