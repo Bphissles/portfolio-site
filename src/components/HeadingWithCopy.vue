@@ -11,3 +11,9 @@ export default {
   props: ["heading", "bodyCopy"],
 };
 </script>
+
+<style scoped>
+.copy-body {
+  margin-bottom: 48px;
+}
+</style>
