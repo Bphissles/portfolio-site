@@ -29,6 +29,7 @@
 
 <script>
 export default {
+  name: "home-view",
   components: { Heading, ProjectPreviewCard, TileContainer },
   data() {
     return {

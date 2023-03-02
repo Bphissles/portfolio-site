@@ -1,3 +1,9 @@
+<script setup>
+  import Heading from "@/components/Heading.vue"
+  import ProjectIntroCard from "@/components/ProjectIntroCard.vue"
+  import TileContainer from "@/components/TileContainer.vue"
+</script>
+
 <template>
   <main>
     <div class="wrapper">
@@ -9,11 +15,9 @@
 </template>
 
 <script>
-import Heading from "@/components/Heading.vue"
-import ProjectIntroCard from "@/components/ProjectIntroCard.vue"
-import TileContainer from "@/components/TileContainer.vue";
 
 export default {
+  name: "project-page",
   components: { Heading, ProjectIntroCard, TileContainer },
   data() {
     return {

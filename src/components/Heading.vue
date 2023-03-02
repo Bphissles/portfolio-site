@@ -31,7 +31,6 @@ export default {
   .breadcrumbs {
     margin-bottom: 26px;
   }
-
   @media (min-width: 768px) {
     margin-bottom: 80px;
   }

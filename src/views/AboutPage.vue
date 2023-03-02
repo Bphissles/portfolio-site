@@ -20,7 +20,8 @@
 </template>
 
 <script>
-  export default {
+export default {
+  name: "about-page",
   components: { Heading, TileContainer, HeadingWithCopy },
   data() {
       return {

@@ -21,6 +21,12 @@ import { RouterLink } from "vue-router";
   </nav>
 </template>
 
+<script>
+export default {
+  name: "navigation",
+}
+</script>
+
 <style lang="scss" scoped>
 #main-nav {
   padding: 30px;

@@ -7,9 +7,7 @@
 
 <script>
 export default {
+  name: "heading-with-copy",
   props: ["heading", "bodyCopy"],
 };
 </script>
-
-<style lang="scss" scoped>
-</style>

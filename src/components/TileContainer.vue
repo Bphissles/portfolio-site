@@ -17,12 +17,6 @@ export default {
   name: "tile-container",
   props: ["heading", "cardCount"],
   components: { SecondaryPreviewCard },
-  data() {
-    return {}
-  },
-  Mounted() {
-    
-  }
 };
 </script>
 

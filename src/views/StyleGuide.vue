@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: "style-guide",
   data() {
     return {
       hello: "its a me a mario",
