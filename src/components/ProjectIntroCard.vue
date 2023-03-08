@@ -15,7 +15,7 @@
     <div class="bottom">
       <div class="summary">
         <p>{{ cardData.summary }}</p>
-        <p><span class="bold">Technology: </span> {{ cardData.projectDetails.software }}</p>
+        <p><span class="bold orange">Technology: </span> {{ cardData.projectDetails.software }}</p>
       </div>
 
       <div class="details">

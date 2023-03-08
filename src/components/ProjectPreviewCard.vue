@@ -10,13 +10,15 @@
       <Breadcrumbs :projectIndex="cardData.projectIndex" :totalCount="totalProjectCount" />
       <Comment class="comment"  :comment="cardData.comment" />
     </div>
-    <ImageLarge :image="cardData.projectDetails.image" :altText="cardData.projectDetails.altText"/>
+    <RouterLink :to="cardData.slug">
+      <ImageLarge :image="cardData.projectDetails.image" :altText="cardData.projectDetails.altText" class="shadow-drop-2-center" />
+    </RouterLink>
 
     <div class="bottom">
       <div class="summary">
         <h1 class="heading-03 underline"><RouterLink :to="cardData.slug">{{ cardData.title }}</RouterLink></h1>
         <p>{{ cardData.summary }}</p>
-        <p><span class="bold">Technology: </span> {{ cardData.projectDetails.software }}</p>
+        <p><span class="bold orange">Technology: </span> {{ cardData.projectDetails.software }}</p>
       </div>
 
       <div class="details">
@@ -101,6 +103,24 @@ export default {
         margin-right: 195px;
       }
     }
+  }
+}
+
+//animation test
+.shadow-drop-2-center {
+	&:hover,:active {
+    animation: shadow-drop-2-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+}
+
+@keyframes shadow-drop-2-center {
+  0% {
+    transform: translateZ(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: translateZ(50px);
+    box-shadow: 0 0 20px 0px #8BE9FD;
   }
 }
 </style>

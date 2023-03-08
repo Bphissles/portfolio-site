@@ -10,10 +10,10 @@ import ContactContainer from "../components/ContactContainer.vue";
   <main>
     <div class="wrapper">
       <Heading projectName="" heading="Yo, my name is Benjamin Hislop." subHeading="Let's be friends"/>
-      <HeadingWithCopy heading="Summary" bodyCopy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse." />
-      <ContactContainer />
-      <ContactForm />
-      <TileContainer heading="More Cool Things." :cardCount="extraCardTemp" />
+      <HeadingWithCopy class="tracking-in-expand" heading="Summary" bodyCopy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse." />
+      <ContactContainer  class="tracking-in-expand"/>
+      <ContactForm  class="tracking-in-expand"/>
+      <TileContainer heading="More Cool Things." :cardCount="extraCardTemp"  class="tracking-in-expand"/>
     </div>
   </main>
 </template>

@@ -10,6 +10,7 @@
       <Heading :projectName="tempObject.projectDetails.client" :heading="tempObject.title" subHeading="Website Redesign"/>
       <ProjectIntroCard :totalProjectCount="totalProjectCount" :cardData="tempObject" />
       <TileContainer heading="More Cool Things." :cardCount="extraCardTemp"/>
+      {{ data }}
     </div>
   </main>
 </template>
@@ -18,6 +19,7 @@
 
 export default {
   name: "project-page",
+  props: ["data"],
   components: { Heading, ProjectIntroCard, TileContainer },
   data() {
     return {

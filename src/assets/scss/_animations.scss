@@ -3,11 +3,25 @@
 }
 @keyframes shadow-pop-bl {
   0% {
-    box-shadow: 0 0 #50FA7B, 0 0 #50FA7B, 0 0 #50FA7B, 0 0 #50FA7B, 0 0 #50FA7B, 0 0 #50FA7B, 0 0 #50FA7B, 0 0 #50FA7B;
+    box-shadow: 0 0 $accent-green, 0 0 $accent-green, 0 0 $accent-green, 0 0 $accent-green, 0 0 $accent-green, 0 0 $accent-green, 0 0 $accent-green, 0 0 $accent-green;
     transform: translateX(0) translateY(0);
   }
   100% {
-    box-shadow: -1px 1px #50FA7B, -2px 2px #50FA7B, -3px 3px #50FA7B, -4px 4px #50FA7B, -5px 5px #50FA7B, -6px 6px #50FA7B, -7px 7px #50FA7B, -8px 8px #50FA7B;
+    box-shadow: -1px 1px $accent-green, -2px 2px $accent-green, -3px 3px $accent-green, -4px 4px $accent-green, -5px 5px $accent-green, -6px 6px $accent-green, -7px 7px $accent-green, -8px 8px $accent-green;
     transform: translateX(8px) translateY(-8px);
+  }
+}
+
+
+.tracking-in-expand {
+  animation: tracking-in-expand .75s cubic-bezier(0.215, 0.610, 0.355, 1.000) .25s both;
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
