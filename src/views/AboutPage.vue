@@ -17,10 +17,9 @@
         <template v-for="(jobs, index) in workExperience"  :key="index">
           <WorkExperience :data="jobs" />
         </template>
-        
       </section>
       
-      <Comment class="green" comment="I also worked in a Mine, and bartended for a long time"/>
+      <Comment class="green" comment="I also worked in a gold mine, and bartended for a long time"/>
 
       <HeadingWithCopy heading="Thing's I'm Good At" bodyCopy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse." />
       <HeadingWithCopy heading="Fun facts" bodyCopy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse." />

@@ -16,7 +16,7 @@
       <textarea name="message" id="message" rows="6"></textarea>
     </p>
     <p>
-      <button>Send<i class="arrow"></i></button>
+      <button type="submit">Send<i class="arrow"></i></button>
     </p>
   </form>
 </template>

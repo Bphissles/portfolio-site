@@ -18,7 +18,7 @@ const router = createRouter({
       component: AboutPage,
     },
     {
-      path: "/project",
+      path: "/:project",
       name: "project",
       component: ProjectPage
     },

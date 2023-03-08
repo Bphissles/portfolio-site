@@ -14,7 +14,7 @@
 
     <div class="bottom">
       <div class="summary">
-        <h1 class="heading-03 underline">{{ cardData.title }}</h1>
+        <h1 class="heading-03 underline"><RouterLink :to="cardData.slug">{{ cardData.title }}</RouterLink></h1>
         <p>{{ cardData.summary }}</p>
         <p><span class="bold">Technology: </span> {{ cardData.projectDetails.software }}</p>
       </div>

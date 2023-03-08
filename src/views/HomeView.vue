@@ -7,76 +7,48 @@
 <template>
   <main>
     <div class="wrapper">
-      <!-- <ul>
+      <!-- <h4 class="heading-03">Site Todo</h4>
+      <ul>
         <li class="blue"><p style="margin-bottom: 0">animation treatment</p></li>
         <li class="blue"><p style="margin-bottom: 0">menu clipping when using touch screen</p></li>
         <li class="blue"><p style="margin-bottom: 0">setup active states on all links</p></li>
         <li class="blue"><p style="margin-bottom: 0">make sure all links are setup</p></li>
         <li class="blue"><p style="margin-bottom: 0">build preview page</p></li>
-        <li class="blue"><p style="margin-bottom: 0">build resume page</p></li>
-        <li class="blue"><p style="margin-bottom: 0">build resume components</p></li>
-        <li class="blue"><p style="margin-bottom: 0">build contact page</p></li>
+        <li class="blue"><p style="margin-bottom: 0">finish social links</p></li>
+        <li class="blue"><p style="margin-bottom: 0">form validation</p></li>
         <li class="blue"><p style="margin-bottom: 0">more .......</p></li>
+      </ul>
+
+      <h4 class="heading-03">Content Plans</h4>
+      <ul>
+        <li class="green"><p style="margin-bottom: 0;">Dad Website</p></li>
+        <li class="green"><p style="margin-bottom: 0;">Loretta Website</p></li>
+        <li class="green"><p style="margin-bottom: 0;">CG migrate</p></li>
+        <li class="green"><p style="margin-bottom: 0;">Dealer Site JSP component integration</p></li>
       </ul> -->
       <Heading projectName="" heading="Yo, my name is Benjamin Hislop." subHeading="I code cool things."/>
-      <ProjectPreviewCard :totalProjectCount="totalProjectCount" :cardData="tempObject" />
-      <ProjectPreviewCard :totalProjectCount="totalProjectCount" :cardData="tempObject2" />
-      <ProjectPreviewCard :totalProjectCount="totalProjectCount" :cardData="tempObject3" />
+
+      <template v-if="isLoaded">
+        <ProjectPreviewCard :totalProjectCount="totalProjectCount" :cardData="cardOutput[0]" />
+        <ProjectPreviewCard :totalProjectCount="totalProjectCount" :cardData="cardOutput[1]" />
+        <ProjectPreviewCard :totalProjectCount="totalProjectCount" :cardData="cardOutput[2]" />
+      </template>
       <TileContainer heading="More Cool Things." :cardCount="extraCardTemp" />
     </div>
   </main>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: "home-view",
   components: { Heading, ProjectPreviewCard, TileContainer },
   data() {
     return {
+      isLoaded: false,
       extraCardTemp: 6,
       totalProjectCount: 9,
-      tempObject: {
-        projectIndex: 1,
-        title: "Mopar Dealer Site",
-        summary:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        comment: "something witty",
-        projectDetails: {
-          client: "Mopar",
-          role: "Front End Developer",
-          date: "2019 to present",
-          software: "Vue.js, jQuery, dotCMS, Angular",
-          image: "https://placekitten.com/555/345",
-          altText: "some kind of description",
-        },
-      },
-      tempObject2: {
-        projectIndex: 2,
-        title: "Mopar Dealer Site",
-        summary:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        comment: "something witty",
-        projectDetails: {
-          client: "Mopar",
-          role: "Front End Developer",
-          date: "2019 to present",
-          software: "Vue.js, jQuery, dotCMS, Angular",
-          image: "https://placekitten.com/555/345",
-          altText: "some kind of description",
-        },
-      },
-      tempObject3: {
-        projectIndex: 3,
-        title: "Mopar Dealer Site",
-        summary:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        comment: "something witty",
-        projectDetails: {
-          client: "Mopar",
-          role: "Front End Developer",
-          date: "2019 to present",
-          software: "Vue.js, jQuery, dotCMS, Angular",
-          image: "https://placekitten.com/555/345",
-          altText: "some kind of description",
-        },
-      },
+      cardOutput:{}
     };
   },
   methods: {
@@ -87,9 +59,16 @@ export default {
   },
   mounted() {
     this.totalProjectCount = this.numberFormatter(this.totalProjectCount);
-    this.tempObject.projectIndex = this.numberFormatter(this.tempObject.projectIndex);
-    this.tempObject2.projectIndex = this.numberFormatter(this.tempObject2.projectIndex);
-    this.tempObject3.projectIndex = this.numberFormatter(this.tempObject3.projectIndex);
+    axios.get(`/sample-project.json`).then(response => {
+      response = response.data
+      response.forEach(elem => {
+        elem.projectIndex = this.numberFormatter(elem.projectIndex)
+      });
+
+      this.isLoaded = true
+      this.cardOutput = response
+    })
+    
   },
 };
 </script>
