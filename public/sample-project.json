@@ -1,0 +1,47 @@
+[
+  {
+    "projectIndex": 1,
+    "title": "Mopar Dealer Site",
+    "slug": "mopar-dealer-site",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "comment": "something witty",
+    "projectDetails": {
+      "client": "Mopar",
+      "role": "Front End Developer",
+      "date": "2019 to present",
+      "software": "Vue.js, jQuery, dotCMS, Angular",
+      "image": "https://placekitten.com/555/345",
+      "altText": "some kind of description"
+    }
+  },
+  {
+    "projectIndex": 2,
+    "title": "Dodge Garage",
+    "slug": "dodge-garage",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "comment": "something witty",
+    "projectDetails": {
+      "client": "Mopar",
+      "role": "Front End Developer",
+      "date": "2019 to present",
+      "software": "Vue.js, jQuery, dotCMS, Angular",
+      "image": "https://placekitten.com/555/345",
+      "altText": "some kind of description"
+    }
+  },
+  {
+    "projectIndex": 3,
+    "title": "Idemitsu Lubricants",
+    "slug": "idemitsu-lubricants",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "comment": "something witty",
+    "projectDetails": {
+      "client": "Mopar",
+      "role": "Front End Developer",
+      "date": "2019 to present",
+      "software": "Vue.js, jQuery, dotCMS, Angular",
+      "image": "https://placekitten.com/555/345",
+      "altText": "some kind of description"
+    }
+  }
+]
