@@ -2,7 +2,7 @@
   import Heading from "@/components/Heading.vue"
   import HeadingWithCopy from "@/components/HeadingWithCopy.vue";
   import TileContainer from "@/components/TileContainer.vue";
-import ContactContainer from "../components/ContactContainer.vue";
+  import ContactContainer from "../components/ContactContainer.vue";
   import ContactForm from "../components/ContactForm.vue";
 </script>
 

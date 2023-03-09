@@ -10,13 +10,13 @@
       <Breadcrumbs :projectIndex="cardData.projectIndex" :totalCount="totalProjectCount" />
       <Comment class="comment"  :comment="cardData.comment" />
     </div>
-    <RouterLink :to="cardData.slug">
+    <RouterLink :to="{name:'project', params: {project: cardData.slug}}">
       <ImageLarge :image="cardData.projectDetails.image" :altText="cardData.projectDetails.altText" class="shadow-drop-2-center" />
     </RouterLink>
 
     <div class="bottom">
       <div class="summary">
-        <h1 class="heading-03 underline"><RouterLink :to="cardData.slug">{{ cardData.title }}</RouterLink></h1>
+        <h1 class="heading-03 underline"><RouterLink :to="{name:'project', params: {project: cardData.slug}}">{{ cardData.title }}</RouterLink></h1>
         <p>{{ cardData.summary }}</p>
         <p><span class="bold orange">Technology: </span> {{ cardData.projectDetails.software }}</p>
       </div>

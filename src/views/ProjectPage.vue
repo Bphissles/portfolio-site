@@ -6,39 +6,27 @@
 
 <template>
   <main>
-    <div class="wrapper">
-      <Heading :projectName="tempObject.projectDetails.client" :heading="tempObject.title" subHeading="Website Redesign"/>
-      <ProjectIntroCard :totalProjectCount="totalProjectCount" :cardData="tempObject" />
+    <div class="wrapper" v-if="isLoaded">
+      <Heading :projectName="cardOutput.projectDetails.client" :heading="cardOutput.title" subHeading="Website Redesign"/>
+      <ProjectIntroCard :totalProjectCount="totalProjectCount" :cardData="cardOutput" />
       <TileContainer heading="More Cool Things." :cardCount="extraCardTemp"/>
-      {{ data }}
     </div>
   </main>
 </template>
 
 <script>
+import axios from "axios";
 
 export default {
   name: "project-page",
-  props: ["data"],
   components: { Heading, ProjectIntroCard, TileContainer },
+  
   data() {
     return {
       extraCardTemp: 3,
       totalProjectCount: 9,
-      tempObject: {
-        projectIndex: 1,
-        title: "Mopar Dealer Site",
-        summary:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        comment: "something witty",
-        projectDetails: {
-          client: "Mopar",
-          role: "Front End Developer",
-          date: "2019 to present",
-          software: "Vue.js, jQuery, dotCMS, Angular",
-          image: "https://placekitten.com/555/345",
-          altText: "some kind of description",
-        },
-      },
+      isLoaded: false,
+      cardOutput: {},
     };
   },
   methods: {
@@ -46,10 +34,26 @@ export default {
       num = num.toString();
       return num.length < 2 ? (num = "0" + num) : num;
     },
+    urlSlugGet() {
+      let url = window.location.pathname
+      let parts = url.split("/");
+      return parts[parts.length - 1];
+    }
   },
   mounted() {
+
     this.totalProjectCount = this.numberFormatter(this.totalProjectCount);
-    this.tempObject.projectIndex = this.numberFormatter(this.tempObject.projectIndex);
+
+    axios.get(`/sample-project.json`).then(response => {
+      response = response.data
+      response.forEach(elem => {
+        if (elem.slug === this.urlSlugGet()) {
+          elem.projectIndex = this.numberFormatter(elem.projectIndex)
+          this.cardOutput = elem  
+        }
+        this.isLoaded = true
+      });
+    })
   },
 };
 </script>
