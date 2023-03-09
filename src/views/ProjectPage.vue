@@ -8,7 +8,7 @@
   <main>
     <div class="wrapper" v-if="isLoaded">
       <Heading :projectName="cardOutput.projectDetails.client" :heading="cardOutput.title" subHeading="Website Redesign"/>
-      <ProjectIntroCard :totalProjectCount="totalProjectCount" :cardData="cardOutput" />
+      <ProjectIntroCard :totalProjectCount="totalProjectCount" :cardData="cardOutput" />   
       <TileContainer heading="More Cool Things." :cardCount="extraCardTemp"/>
     </div>
   </main>
@@ -20,7 +20,7 @@ import axios from "axios";
 export default {
   name: "project-page",
   components: { Heading, ProjectIntroCard, TileContainer },
-  
+
   data() {
     return {
       extraCardTemp: 3,
@@ -35,13 +35,12 @@ export default {
       return num.length < 2 ? (num = "0" + num) : num;
     },
     urlSlugGet() {
-      let url = window.location.pathname
-      let parts = url.split("/");
+      const url = window.location.pathname
+      const parts = url.split("/");
       return parts[parts.length - 1];
     }
   },
   mounted() {
-
     this.totalProjectCount = this.numberFormatter(this.totalProjectCount);
 
     axios.get(`/sample-project.json`).then(response => {

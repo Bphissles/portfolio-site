@@ -16,10 +16,8 @@
             <li class="blue"><p style="margin-bottom: 0">animation treatment</p></li>
             <li class="blue"><p style="margin-bottom: 0">menu clipping when using touch screen</p></li>
             <li class="blue"><p style="margin-bottom: 0">make sure all links are setup</p></li>
-            <li class="blue"><p style="margin-bottom: 0">build preview page</p></li>
             <li class="blue"><p style="margin-bottom: 0">finish social links</p></li>
             <li class="blue"><p style="margin-bottom: 0">form validation</p></li>
-            <li class="blue"><p style="margin-bottom: 0">more .......</p></li>
           </ul>
         </div>
 
@@ -35,11 +33,12 @@
       </div>
 
       <template v-if="isLoaded">
+        <!-- *we only want to show the first 3 from the list here -->
         <ProjectPreviewCard class="tracking-in-expand" :totalProjectCount="totalProjectCount" :cardData="cardOutput[0]" />
         <ProjectPreviewCard class="tracking-in-expand" :totalProjectCount="totalProjectCount" :cardData="cardOutput[1]" />
         <ProjectPreviewCard class="tracking-in-expand" :totalProjectCount="totalProjectCount" :cardData="cardOutput[2]" />
       </template>
-      <TileContainer class="tracking-in-expand" heading="More Cool Things." :cardCount="extraCardTemp" />
+      <!-- <TileContainer class="tracking-in-expand" heading="More Cool Things." :cardCount="extraCardTemp" /> -->
     </div>
   </main>
 </template>
