@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <img src="https://placekitten.com/500" alt="something lovely">
-    <span><p class="heading-03 underline">Luxwall</p>  <i class="arrow"></i></span>
+    <span><p class="heading-03 underline">Something</p>  <i class="arrow"></i></span>
   </div>
 </template>
 
