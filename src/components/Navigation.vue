@@ -58,7 +58,7 @@ export default {
     align-items: baseline;
     padding: 30px;
     padding-right: 23px;
-    height: calc(100vh - 60px);
+    height: calc(100dvh - 60px);
     width: 153px;
     left: 0;
     top: 0;
@@ -66,7 +66,7 @@ export default {
 
   @media (min-width: 992px) {
     padding: 60px 26px 60px 55px;
-    height: calc(100vh - 120px);
+    height: calc(100dvh - 120px);
   }
 
   @media (min-width: 1200px) {
