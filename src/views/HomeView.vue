@@ -82,8 +82,8 @@ export default {
 
 <style>
   .todo-block {
-    display: flex !important;
-    /* display: none; */
+    /* display: flex !important; */
+    display: none;
     justify-content: space-between;
     margin-bottom: 24px;
   }
