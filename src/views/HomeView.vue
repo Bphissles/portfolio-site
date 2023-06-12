@@ -2,15 +2,17 @@
   import Heading from "@/components/Heading.vue"
   import ProjectPreviewCard from "@/components/ProjectPreviewCard.vue"
   import TileContainer from "@/components/TileContainer.vue";
+  import Comment from "../components/Comment.vue";
 </script>
 
 <template>
   <main>
     <div class="wrapper">
       <Heading projectName="" heading="Yo, my name is Benjamin Hislop." subHeading="I code cool things."/>
-
+      <a href="/resources/documents/jmp-book.pdf" target="_blank"><Comment comment="Text book link, in case I forget"/></a>
       <div class="todo-block">
         <div>
+
           <h4 class="heading-03" style="margin-bottom: 0;">Site Todo</h4>
           <ul>
             <li class="blue"><p style="margin-bottom: 0">animation treatment</p></li>
@@ -80,8 +82,8 @@ export default {
 
 <style>
   .todo-block {
-    /* display: flex !important; */
-    display: none;
+    display: flex !important;
+    /* display: none; */
     justify-content: space-between;
     margin-bottom: 24px;
   }

@@ -16,7 +16,9 @@
 
     <div class="bottom">
       <div class="summary">
-        <h1 class="heading-03 underline"><RouterLink :to="{name:'project', params: {project: cardData.slug}}">{{ cardData.title }}</RouterLink></h1>
+        <h1 class="heading-03 underline">
+          <RouterLink :to="{name:'project', params: {project: cardData.slug}}">{{ cardData.title }}</RouterLink>
+        </h1>
         <p>{{ cardData.summary }}</p>
         <p><span class="bold orange">Technology: </span> {{ cardData.projectDetails.software }}</p>
       </div>
