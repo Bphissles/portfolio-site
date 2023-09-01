@@ -9,27 +9,17 @@
   <main>
     <div class="wrapper">
       <Heading projectName="" heading="Yo, my name is Benjamin Hislop." subHeading="I code cool things."/>
-      <a href="/resources/documents/jmp-book.pdf" target="_blank"><Comment comment="Text book link, in case I forget"/></a>
       <div class="todo-block">
         <div>
 
-          <h4 class="heading-03" style="margin-bottom: 0;">Site Todo</h4>
+          <h4 class="heading-03" style="margin-bottom: 0">Site Todo</h4>
           <ul>
-            <li class="blue"><p style="margin-bottom: 0">animation treatment</p></li>
-            <li class="blue"><p style="margin-bottom: 0">menu clipping when using touch screen</p></li>
+            <li class="orange"><p style="margin-bottom: 0">animation treatment</p></li>
+            <li class="orange"><p style="margin-bottom: 0">menu clipping when using touch screen</p></li>
+            <li class="blue"><p style="margin-bottom: 0">create home route when invalid URL pops up for project pages</p></li>
             <li class="blue"><p style="margin-bottom: 0">make sure all links are setup</p></li>
             <li class="blue"><p style="margin-bottom: 0">finish social links</p></li>
             <li class="blue"><p style="margin-bottom: 0">form validation</p></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="heading-03" style="margin-bottom: 0;">Content Plans</h4>
-          <ul>
-            <li class="green"><p style="margin-bottom: 0;">Dad Website</p></li>
-            <li class="green"><p style="margin-bottom: 0;">Loretta Website</p></li>
-            <li class="green"><p style="margin-bottom: 0;">CG migrate</p></li>
-            <li class="green"><p style="margin-bottom: 0;">Dealer Site JSP component integration</p></li>
           </ul>
         </div>
       </div>
@@ -82,8 +72,8 @@ export default {
 
 <style>
   .todo-block {
-    /* display: flex !important; */
-    display: none;
+    display: flex !important;
+    /* display: none; */
     justify-content: space-between;
     margin-bottom: 24px;
   }

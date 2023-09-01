@@ -8,7 +8,7 @@
   <article :class="'card project' + cardData.projectIndex"> <!-- ?depending on strategy this class may go away -->
     <div class="top">
       <Breadcrumbs :projectIndex="cardData.projectIndex" :totalCount="totalProjectCount" />
-      <Comment class="comment"  :comment="cardData.comment" />
+      <Comment class="comment" :kanye="true"  :comment="cardData.comment" />
     </div>
     <ImageLarge :image="cardData.projectDetails.image" :altText="cardData.projectDetails.altText"/>
 

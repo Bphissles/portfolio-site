@@ -8,7 +8,7 @@
   <article :class="'card project' + cardData.projectIndex"> <!-- ?depending on strategy this class may go away -->
     <div class="top">
       <Breadcrumbs :projectIndex="cardData.projectIndex" :totalCount="totalProjectCount" />
-      <Comment class="comment"  :comment="cardData.comment" />
+      <Comment class="comment" :kanye="true"  :comment="cardData.comment" />
     </div>
     <RouterLink :to="{name:'project', params: {project: cardData.slug}}">
       <ImageLarge :image="cardData.projectDetails.image" :altText="cardData.projectDetails.altText" class="shadow-drop-2-center" />
@@ -16,9 +16,9 @@
 
     <div class="bottom">
       <div class="summary">
-        <h1 class="heading-03 underline">
+        <h3 class="heading-03 underline">
           <RouterLink :to="{name:'project', params: {project: cardData.slug}}">{{ cardData.title }}</RouterLink>
-        </h1>
+        </h3>
         <p>{{ cardData.summary }}</p>
         <p><span class="bold orange">Technology: </span> {{ cardData.projectDetails.software }}</p>
       </div>
@@ -56,6 +56,15 @@ export default {
       margin-bottom: 24px;
       & > * {
         margin-bottom: 12px;
+      }
+      h3 {
+        transition: color .75s ease-in-out;
+        &:hover {
+          color: #FF4136;
+        }
+        a {
+          transition: color .75s ease-in-out;
+        }
       }
     }
   }
