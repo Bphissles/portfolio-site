@@ -1,12 +1,12 @@
 <template>
   <section class="work-entry">
     <div class="headline">
-      <h3 class="heading-03 big italic">{{ data.position }}</h3>
-      <p class="company">{{ data.company }}</p>
-      <p><small>{{ data.time }}</small></p>
+      <h3 class="heading-03 big italic green" v-html="data.position"></h3>
+      <p class="company blue">{{ data.company }}</p>
+      <p><small>{{ data.startDate }}</small> - <small>{{ data.currentEmployer ? 'Current' : data.endDate }}</small></p>
     </div>
     <ul class="responsibilities">
-      <li v-for="elem in data.responsibilities">
+      <li v-for="elem in data.body">
         <p>{{ elem }}</p>
       </li>
     </ul>

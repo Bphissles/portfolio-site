@@ -13,10 +13,8 @@
 
           <h4 class="heading-03" style="margin-bottom: 0">Site Todo</h4>
           <ul>
-            <li class="orange"><p style="margin-bottom: 0">menu clipping when using touch screen</p></li>
             <li class="blue"><p style="margin-bottom: 0">create home route when invalid URL pops up for project pages</p></li>
             <li class="blue"><p style="margin-bottom: 0">make sure all links are setup</p></li>
-            <li class="blue"><p style="margin-bottom: 0">form validation</p></li>
           </ul>
         </div>
       </div>
@@ -34,6 +32,7 @@
 
 <script>
 import axios from 'axios'
+
 export default {
   name: "home-view",
   components: { Heading, ProjectPreviewCard, TileContainer },
@@ -61,8 +60,10 @@ export default {
 
       this.isLoaded = true
       this.cardOutput = response
-    })
-    
+    })  
+    axios.get(`https://swapi.dev/api/planets/1/`).then(response => {
+      console.log(response)
+    })  
   },
 };
 </script>

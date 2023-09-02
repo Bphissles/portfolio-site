@@ -27,9 +27,9 @@ export default {
   .tiles {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 15px;
     .card {
-      flex: 0 0 47%;
+      
       &:last-child {
         display: none;
       }
@@ -43,12 +43,17 @@ export default {
     text-align: end;
   }
 
-  @media (min-width: 640px) {
-    margin-top: 12px;
+  @media (min-width: 375px) {
+    .tiles {
+      .card {
+        flex: 0 0 47%;
+      }
+    }
   }
   @media (min-width: 640px) {
     margin-top: 8px;
   }
+
   @media (min-width: 992px) {
     margin-top: 28px;
   }
