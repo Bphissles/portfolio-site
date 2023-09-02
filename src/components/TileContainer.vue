@@ -8,7 +8,7 @@
     <div class="tiles">
       <SecondaryPreviewCard v-for="card in cardCount" />
     </div>
-    <Comment class="comment" comment="Space for another comment" />
+    <Comment class="comment" :kanye="true" comment="Space for another comment" />
   </section>
 </template>
 
@@ -23,12 +23,19 @@ export default {
 <style lang="scss" scoped>
 .tile-container {
   margin-top: 8px;
+  padding-bottom: 2rem;
   .tiles {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 30px;
     .card {
       flex: 0 0 47%;
+      &:last-child {
+        display: none;
+      }
+      &:nth-child(6) {
+        display: block;
+      }
     }
   }
 
@@ -48,8 +55,12 @@ export default {
 
   @media (min-width: 1200px) {
     .tiles {
+      justify-content: space-between;
       .card {
         flex: 0 0 31%;
+        &:last-child {
+          display: block;
+        } 
       }
     }
   }

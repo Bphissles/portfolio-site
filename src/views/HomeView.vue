@@ -2,7 +2,6 @@
   import Heading from "@/components/Heading.vue"
   import ProjectPreviewCard from "@/components/ProjectPreviewCard.vue"
   import TileContainer from "@/components/TileContainer.vue";
-  import Comment from "../components/Comment.vue";
 </script>
 
 <template>
@@ -18,7 +17,6 @@
             <li class="orange"><p style="margin-bottom: 0">menu clipping when using touch screen</p></li>
             <li class="blue"><p style="margin-bottom: 0">create home route when invalid URL pops up for project pages</p></li>
             <li class="blue"><p style="margin-bottom: 0">make sure all links are setup</p></li>
-            <li class="blue"><p style="margin-bottom: 0">finish social links</p></li>
             <li class="blue"><p style="margin-bottom: 0">form validation</p></li>
           </ul>
         </div>
@@ -26,11 +24,11 @@
 
       <template v-if="isLoaded">
         <!-- *we only want to show the first 3 from the list here -->
-        <ProjectPreviewCard class="tracking-in-expand" :totalProjectCount="totalProjectCount" :cardData="cardOutput[0]" />
-        <ProjectPreviewCard class="tracking-in-expand" :totalProjectCount="totalProjectCount" :cardData="cardOutput[1]" />
-        <ProjectPreviewCard class="tracking-in-expand" :totalProjectCount="totalProjectCount" :cardData="cardOutput[2]" />
+        <ProjectPreviewCard class="tracking-in-expand" :preview="true" :totalProjectCount="totalProjectCount" :cardData="cardOutput[0]" />
+        <ProjectPreviewCard class="tracking-in-expand" :preview="true" :totalProjectCount="totalProjectCount" :cardData="cardOutput[1]" />
+        <ProjectPreviewCard class="tracking-in-expand" :preview="true" :totalProjectCount="totalProjectCount" :cardData="cardOutput[2]" />
       </template>
-      <!-- <TileContainer class="tracking-in-expand" heading="More Cool Things." :cardCount="extraCardTemp" /> -->
+      <TileContainer class="tracking-in-expand" heading="More Cool Things." :cardCount="extraCardTemp" />
     </div>
   </main>
 </template>

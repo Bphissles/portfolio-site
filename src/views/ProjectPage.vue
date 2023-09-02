@@ -1,6 +1,6 @@
 <script setup>
   import Heading from "@/components/Heading.vue"
-  import ProjectIntroCard from "@/components/ProjectIntroCard.vue"
+  import ProjectPreviewCard from "@/components/ProjectPreviewCard.vue"
   import TileContainer from "@/components/TileContainer.vue"
 </script>
 
@@ -8,9 +8,18 @@
   <main>
     <div class="wrapper" v-if="isLoaded">
       <Heading :projectName="cardOutput.projectDetails.client" :heading="cardOutput.title" subHeading="Website Redesign"/>
-      <ProjectIntroCard :totalProjectCount="totalProjectCount" :cardData="cardOutput" />   
+      <ProjectPreviewCard class="tracking-in-expand" :preview="false" :totalProjectCount="totalProjectCount" :cardData="cardOutput" />   
       <TileContainer heading="More Cool Things." :cardCount="extraCardTemp"/>
     </div>
+    <div v-else>
+      <h1 class="heading-01">
+        <span class="orange">404</span><br>
+        <span class="green">404</span><br>
+        <span class="blue">404</span><br>
+        <span class="red">404</span>
+      </h1>
+      <span class="heading-02 red bold">YOU SHOULDN'T BE HERE GO <RouterLink to="/">HOME</RouterLink></span>
+    </div> 
   </main>
 </template>
 
@@ -19,7 +28,7 @@ import axios from "axios";
 
 export default {
   name: "project-page",
-  components: { Heading, ProjectIntroCard, TileContainer },
+  components: { Heading, TileContainer, ProjectPreviewCard },
 
   data() {
     return {
@@ -48,9 +57,9 @@ export default {
       response.forEach(elem => {
         if (elem.slug === this.urlSlugGet()) {
           elem.projectIndex = this.numberFormatter(elem.projectIndex)
-          this.cardOutput = elem  
-        }
-        this.isLoaded = true
+          this.cardOutput = elem
+          this.isLoaded = true
+        } 
       });
     })
   },

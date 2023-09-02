@@ -10,7 +10,7 @@
       "role": "Front End Developer",
       "date": "2019 to present",
       "software": "Vue.js, jQuery, dotCMS, Angular",
-      "image": "https://placekitten.com/555/345",
+      "mainImage": "https://placekitten.com/555/345",
       "altText": "some kind of description"
     }
   },
@@ -25,7 +25,7 @@
       "role": "Front End Developer",
       "date": "2019 to present",
       "software": "Vue.js, jQuery, dotCMS, Angular",
-      "image": "https://placekitten.com/555/345",
+      "mainImage": "https://placekitten.com/555/345",
       "altText": "some kind of description"
     }
   },
@@ -40,7 +40,52 @@
       "role": "Front End Developer",
       "date": "2019 to present",
       "software": "Vue.js, jQuery, dotCMS, Angular",
-      "image": "https://placekitten.com/555/345",
+      "mainImage": "https://placekitten.com/555/345",
+      "altText": "some kind of description"
+    }
+  },
+  {
+    "projectIndex": 4,
+    "title": "Idemitsu Lubricants",
+    "slug": "idemitsu-lubricants",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "comment": "something witty",
+    "projectDetails": {
+      "client": "Mopar",
+      "role": "Front End Developer",
+      "date": "2019 to present",
+      "software": "Vue.js, jQuery, dotCMS, Angular",
+      "mainImage": "https://placekitten.com/555/345",
+      "altText": "some kind of description"
+    }
+  },
+  {
+    "projectIndex": 5,
+    "title": "Idemitsu Lubricants",
+    "slug": "idemitsu-lubricants",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "comment": "something witty",
+    "projectDetails": {
+      "client": "Mopar",
+      "role": "Front End Developer",
+      "date": "2019 to present",
+      "software": "Vue.js, jQuery, dotCMS, Angular",
+      "mainImage": "https://placekitten.com/555/345",
+      "altText": "some kind of description"
+    }
+  },
+  {
+    "projectIndex": 6,
+    "title": "Idemitsu Lubricants",
+    "slug": "idemitsu-lubricants",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "comment": "something witty",
+    "projectDetails": {
+      "client": "Mopar",
+      "role": "Front End Developer",
+      "date": "2019 to present",
+      "software": "Vue.js, jQuery, dotCMS, Angular",
+      "mainImage": "https://placekitten.com/555/345",
       "altText": "some kind of description"
     }
   }

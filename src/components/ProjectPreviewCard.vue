@@ -10,13 +10,14 @@
       <Breadcrumbs :projectIndex="cardData.projectIndex" :totalCount="totalProjectCount" />
       <Comment class="comment" :kanye="true"  :comment="cardData.comment" />
     </div>
-    <RouterLink :to="{name:'project', params: {project: cardData.slug}}">
-      <ImageLarge :image="cardData.projectDetails.image" :altText="cardData.projectDetails.altText" class="shadow-drop-2-center" />
+    <RouterLink v-if="preview" :to="{name:'project', params: {project: cardData.slug}}">
+      <ImageLarge :image="cardData.projectDetails.mainImage" :altText="cardData.projectDetails.altText" class="shadow-drop-2-center" />
     </RouterLink>
+    <ImageLarge v-else :image="cardData.projectDetails.mainImage" :altText="cardData.projectDetails.altText" />
 
     <div class="bottom">
       <div class="summary">
-        <h3 class="heading-03 underline">
+        <h3 class="heading-03 underline" v-if="preview">
           <RouterLink :to="{name:'project', params: {project: cardData.slug}}">{{ cardData.title }}</RouterLink>
         </h3>
         <p>{{ cardData.summary }}</p>
@@ -36,7 +37,7 @@
 <script>
 export default {
   name: 'project-preview-card',
-  props: ['totalProjectCount', 'cardData'],
+  props: ['totalProjectCount', 'cardData', 'preview'],
 }
 </script>
 
@@ -58,12 +59,12 @@ export default {
         margin-bottom: 12px;
       }
       h3 {
-        transition: color .75s ease-in-out;
+        transition: color .75s ease;
         &:hover {
           color: #FF4136;
         }
         a {
-          transition: color .75s ease-in-out;
+          transition: color .75s ease;
         }
       }
     }
