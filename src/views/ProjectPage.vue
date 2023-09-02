@@ -11,7 +11,7 @@
       <ProjectPreviewCard class="tracking-in-expand" :preview="false" :totalProjectCount="totalProjectCount" :cardData="cardOutput" />   
       <TileContainer heading="More Cool Things." :cardCount="extraCardTemp"/>
     </div>
-    <div v-else>
+    <div v-else class="tracking-in-expand">
       <h1 class="heading-01">
         <span class="orange">404</span><br>
         <span class="green">404</span><br>
@@ -59,7 +59,7 @@ export default {
           elem.projectIndex = this.numberFormatter(elem.projectIndex)
           this.cardOutput = elem
           this.isLoaded = true
-        } 
+        }
       });
     })
   },

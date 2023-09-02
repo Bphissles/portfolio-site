@@ -36,6 +36,10 @@
   button {
     all: unset;
     cursor: pointer;
+
+    &:hover {
+      color: #8BE9FD;
+    }
   }
 
   .arrow {

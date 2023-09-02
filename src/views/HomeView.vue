@@ -13,7 +13,6 @@
 
           <h4 class="heading-03" style="margin-bottom: 0">Site Todo</h4>
           <ul>
-            <li class="orange"><p style="margin-bottom: 0">animation treatment</p></li>
             <li class="orange"><p style="margin-bottom: 0">menu clipping when using touch screen</p></li>
             <li class="blue"><p style="margin-bottom: 0">create home route when invalid URL pops up for project pages</p></li>
             <li class="blue"><p style="margin-bottom: 0">make sure all links are setup</p></li>
