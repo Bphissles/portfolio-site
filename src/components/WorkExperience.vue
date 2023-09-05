@@ -36,11 +36,6 @@ export default {
 
     .responsibilities {
       padding-left: 16px;
-      li {
-        p {
-          // margin-bottom: 4px;
-        }
-      }
       margin-bottom: 24px;
     }
   }
