@@ -9,7 +9,7 @@
       <Heading :projectName="cardOutput.projectDetails.client" :heading="cardOutput.title" :subHeading="cardOutput.subHead"/>
       <ProjectPreviewCard class="tracking-in-expand" :preview="false" :totalProjectCount="totalProjectCount" :cardData="cardOutput" />   
     </div>
-    <div v-else class="tracking-in-expand">
+    <!-- <div v-else class="tracking-in-expand">
       <h1 class="heading-01">
         <span class="orange">404</span><br>
         <span class="green">404</span><br>
@@ -17,7 +17,7 @@
         <span class="red">404</span>
       </h1>
       <span class="heading-02 red bold">YOU SHOULDN'T BE HERE GO <RouterLink to="/">HOME</RouterLink></span>
-    </div> 
+    </div>  -->
   </main>
 </template>
 
