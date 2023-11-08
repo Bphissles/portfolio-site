@@ -8,7 +8,7 @@
   <article :class="'card project' + cardData.projectIndex"> <!-- ?depending on strategy this class may go away -->
     <div class="top">
       <Breadcrumbs :projectIndex="cardData.projectIndex" :totalCount="totalProjectCount" />
-      <Comment class="comment" :kanye="true"  :comment="cardData.comment" />
+      <Comment class="comment" :kanye="false"  :comment="cardData.comment" />
     </div>
     <RouterLink v-if="preview" :to="{name:'project', params: {project: cardData.slug}}">
       <ImageLarge :image="cardData.projectDetails.mainImage" :altText="cardData.projectDetails.altText" class="shadow-drop-2-center" />

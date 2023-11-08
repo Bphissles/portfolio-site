@@ -8,7 +8,7 @@
     <div class="tiles">
       <SecondaryPreviewCard v-for="card in cardCount" />
     </div>
-    <Comment class="comment" :kanye="true" comment="Space for another comment" />
+    <Comment class="comment" :kanye="false" comment="Space for another comment" />
   </section>
 </template>
 
