@@ -1,23 +1,52 @@
 [
   {
     "projectIndex": 1,
-    "title": "Mopar Dealer Site",
-    "slug": "mopar-dealer-site",
+    "title": "Dodge Garage",
+    "subHead": "Website Optimization",
+    "slug": "dodge-garage",
     "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "comment": "something witty",
     "projectDetails": {
-      "client": "Mopar",
-      "role": "Front End Developer",
+      "client": "Dodge",
+      "url": "https://www.dodgegarage.com/",
+      "site": "www.dodgegarage.com",
+      "role": "Accessibility Specialist,<br>Front End Developer",
       "date": "2019 to present",
       "software": "Vue.js, jQuery, dotCMS, Angular",
-      "mainImage": "https://placekitten.com/555/345",
+      "mainImage": "/images/dodge/dodge-landing.png",
       "altText": "some kind of description"
-    }
+    },
+    "additionalImages": [
+      {
+        "comment": "Sanity dashboard for content creators",
+        "image": "/images/dodge/events-sanity.png",
+        "altText": "Sanity.io events dashboard for dodge garage",
+        "description": "This dashboard streamlined content management by providing a user-centric interface that allows content creators control over their work. This autonomy has eliminated the need for developer intervention in day-to-day content operations, reducing maintenance workload and enabling the development team to concentrate on higher-level projects."
+      },
+      {
+        "comment": "Sanity dashboard for content creators",
+        "image": "/images/dodge/event-be.png",
+        "altText": "Sanity.io events dashboard for dodge garage",
+        "description": "This dashboard streamlined content management by providing a user-centric interface that allows content creators control over their work. This autonomy has eliminated the need for developer intervention in day-to-day content operations, reducing maintenance workload and enabling the development team to concentrate on higher-level projects."
+      },
+      {
+        "comment": "Sanity dashboard for content creators",
+        "image": "/images/dodge/events-fe.png",
+        "altText": "Sanity.io events dashboard for dodge garage",
+        "description": "This dashboard streamlined content management by providing a user-centric interface that allows content creators control over their work. This autonomy has eliminated the need for developer intervention in day-to-day content operations, reducing maintenance workload and enabling the development team to concentrate on higher-level projects."
+      },
+      {
+        "comment": "Sanity dashboard for content creators",
+        "image": "/images/dodge/events-wcag.png",
+        "altText": "Sanity.io events dashboard for dodge garage",
+        "description": "This dashboard streamlined content management by providing a user-centric interface that allows content creators control over their work. This autonomy has eliminated the need for developer intervention in day-to-day content operations, reducing maintenance workload and enabling the development team to concentrate on higher-level projects."
+      }
+    ]
   },
   {
     "projectIndex": 2,
     "title": "Dodge Garage",
-    "slug": "dodge-garage",
+    "slug": "dodge-garage-wrong",
     "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "comment": "something witty",
     "projectDetails": {
@@ -31,51 +60,6 @@
   },
   {
     "projectIndex": 3,
-    "title": "Idemitsu Lubricants",
-    "slug": "idemitsu-lubricants",
-    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "comment": "something witty",
-    "projectDetails": {
-      "client": "Mopar",
-      "role": "Front End Developer",
-      "date": "2019 to present",
-      "software": "Vue.js, jQuery, dotCMS, Angular",
-      "mainImage": "https://placekitten.com/555/345",
-      "altText": "some kind of description"
-    }
-  },
-  {
-    "projectIndex": 4,
-    "title": "Idemitsu Lubricants",
-    "slug": "idemitsu-lubricants",
-    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "comment": "something witty",
-    "projectDetails": {
-      "client": "Mopar",
-      "role": "Front End Developer",
-      "date": "2019 to present",
-      "software": "Vue.js, jQuery, dotCMS, Angular",
-      "mainImage": "https://placekitten.com/555/345",
-      "altText": "some kind of description"
-    }
-  },
-  {
-    "projectIndex": 5,
-    "title": "Idemitsu Lubricants",
-    "slug": "idemitsu-lubricants",
-    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "comment": "something witty",
-    "projectDetails": {
-      "client": "Mopar",
-      "role": "Front End Developer",
-      "date": "2019 to present",
-      "software": "Vue.js, jQuery, dotCMS, Angular",
-      "mainImage": "https://placekitten.com/555/345",
-      "altText": "some kind of description"
-    }
-  },
-  {
-    "projectIndex": 6,
     "title": "Idemitsu Lubricants",
     "slug": "idemitsu-lubricants",
     "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",

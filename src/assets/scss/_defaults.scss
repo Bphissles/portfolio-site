@@ -2,6 +2,7 @@ body {
   position: relative;
   background-color: $neutral-900;
   color: $neutral-300;
+  // padding-bottom: 40px;
 
   height: 100px;
 
@@ -35,6 +36,7 @@ body {
     padding-inline: 55px;
     .wrapper {
       padding: 0;
+      padding-bottom: 30px;
     }
   }
 

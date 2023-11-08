@@ -1,15 +1,13 @@
 <script setup>
   import Heading from "@/components/Heading.vue"
   import ProjectPreviewCard from "@/components/ProjectPreviewCard.vue"
-  import TileContainer from "@/components/TileContainer.vue"
 </script>
 
 <template>
   <main>
     <div class="wrapper" v-if="isLoaded">
-      <Heading :projectName="cardOutput.projectDetails.client" :heading="cardOutput.title" subHeading="Website Redesign"/>
+      <Heading :projectName="cardOutput.projectDetails.client" :heading="cardOutput.title" :subHeading="cardOutput.subHead"/>
       <ProjectPreviewCard class="tracking-in-expand" :preview="false" :totalProjectCount="totalProjectCount" :cardData="cardOutput" />   
-      <TileContainer heading="More Cool Things." :cardCount="extraCardTemp"/>
     </div>
     <div v-else class="tracking-in-expand">
       <h1 class="heading-01">
@@ -24,16 +22,16 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from "axios"
 
 export default {
   name: "project-page",
-  components: { Heading, TileContainer, ProjectPreviewCard },
+  components: { Heading, ProjectPreviewCard },
 
   data() {
     return {
       extraCardTemp: 3,
-      totalProjectCount: 9,
+      totalProjectCount: 3,
       isLoaded: false,
       cardOutput: {},
     };

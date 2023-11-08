@@ -1,23 +1,22 @@
 <script setup>
   import Heading from "@/components/Heading.vue"
   import ProjectPreviewCard from "@/components/ProjectPreviewCard.vue"
-  import TileContainer from "@/components/TileContainer.vue";
 </script>
 
 <template>
   <main>
+    <h1 class="heading-01 red text-center" style="margin-bottom: 0">SITE IN PROGRESS</h1>
+    <br>
     <div class="wrapper">
       <Heading projectName="" heading="Yo, my name is Benjamin Hislop." subHeading="I code cool things."/>
-      <div class="todo-block">
+      <!-- <div class="todo-block">
         <div>
-
-          <h4 class="heading-03" style="margin-bottom: 0">Site Todo</h4>
           <ul>
             <li class="blue"><p style="margin-bottom: 0">create home route when invalid URL pops up for project pages</p></li>
             <li class="blue"><p style="margin-bottom: 0">make sure all links are setup</p></li>
           </ul>
         </div>
-      </div>
+      </div> -->
 
       <template v-if="isLoaded">
         <!-- *we only want to show the first 3 from the list here -->
@@ -25,7 +24,7 @@
         <ProjectPreviewCard class="tracking-in-expand" :preview="true" :totalProjectCount="totalProjectCount" :cardData="cardOutput[1]" />
         <ProjectPreviewCard class="tracking-in-expand" :preview="true" :totalProjectCount="totalProjectCount" :cardData="cardOutput[2]" />
       </template>
-      <TileContainer class="tracking-in-expand" heading="More Cool Things." :cardCount="extraCardTemp" />
+      <!-- <TileContainer class="tracking-in-expand" heading="More Cool Things." :cardCount="extraCardTemp" /> -->
     </div>
   </main>
 </template>
@@ -35,12 +34,12 @@ import axios from 'axios'
 
 export default {
   name: "home-view",
-  components: { Heading, ProjectPreviewCard, TileContainer },
+  components: { Heading, ProjectPreviewCard},
   data() {
     return {
       isLoaded: false,
       extraCardTemp: 6,
-      totalProjectCount: 9,
+      totalProjectCount: 3,
       cardOutput:{}
     };
   },

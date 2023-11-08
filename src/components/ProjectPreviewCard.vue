@@ -21,17 +21,25 @@
           <RouterLink :to="{name:'project', params: {project: cardData.slug}}">{{ cardData.title }}</RouterLink>
         </h3>
         <p>{{ cardData.summary }}</p>
-        <p><span class="bold orange">Technology: </span> {{ cardData.projectDetails.software }}</p>
+        <p class="technology"><span class="bold orange">Technology: </span> <span v-html="cardData.projectDetails.software"></span></p>
       </div>
 
       <div class="details">
-        <p><span class="bold uppercase">Client </span> - {{ cardData.projectDetails.client }} </p>
-        <p><span class="bold uppercase">Role </span> - {{ cardData.projectDetails.role }} </p>
+        <p><span class="bold uppercase">Client </span> - <span v-html="cardData.projectDetails.client"></span> </p>
+        <p v-if="!preview"><span class="bold uppercase">Site </span> - <span><a :href="cardData.projectDetails.url" target="_blank" rel="noopener noreferrer">{{ cardData.projectDetails.site }}</a></span> </p>
+        <p><span class="bold uppercase">Role </span> - <span v-html="cardData.projectDetails.role"></span> </p>
         <p><span class="bold uppercase">Date </span> - {{ cardData.projectDetails.date }}</p>
       </div>
     </div>
-
   </article>
+
+  <div class="additional-content" v-if="!preview">
+    <div v-for="content in cardData.additionalImages">
+      <Comment class="comment" :kanye="false"  :comment="content.comment" />
+      <ImageLarge :image="content.image" :altText="content.altText" />
+      <p class="description" v-html="content.description"></p>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -48,6 +56,7 @@ export default {
     margin-bottom: 24px;
     .comment {
       margin-bottom: 0;
+      max-width: 400px;
     }
   }
 
@@ -77,6 +86,10 @@ export default {
       flex-direction: column;
       width: max-content;
       margin-left: auto;
+      p {
+        display: flex;
+        gap: 10px;
+      }
     }
   }
 
@@ -94,6 +107,11 @@ export default {
       display: flex;
       .summary {
         margin-right: 50px;
+
+        .technology {
+          display: flex;
+          gap: 10px;
+        }
       }
 
       .details {
@@ -102,6 +120,7 @@ export default {
       }
     }
   }
+
   @media (min-width: 1200px) {
     &:nth-child(even) {
       margin-left: 100px;
@@ -118,6 +137,16 @@ export default {
   }
 }
 
+.additional-content {
+  .comment {
+    text-align: right;
+  }
+  .description {
+    margin-top: 24px;
+    margin-bottom: 36px;
+    max-width: 800px;
+  }
+}
 //animation test
 .shadow-drop-2-center {
 	&:hover,:active {

@@ -1,7 +1,6 @@
 <script setup>
   import Heading from "@/components/Heading.vue"
   import HeadingWithCopy from "@/components/HeadingWithCopy.vue";
-  import TileContainer from "@/components/TileContainer.vue";
   import Comment from "@/components/Comment.vue";
   import WorkExperience from "@/components/WorkExperience.vue";
   import sanity from "@/client";
@@ -24,7 +23,6 @@
       <Comment class="orange" comment="I also worked in a gold mine, and bartended for a long time"/>
       <HeadingWithCopy heading="Thing's I'm Good At" bodyCopy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse." />
       <HeadingWithCopy heading="Fun facts" bodyCopy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse." />
-      <TileContainer heading="More Cool Things." :cardCount="extraCardTemp" />
     </div>
   </main>
 </template>
@@ -41,7 +39,7 @@ const query = `*[_type == "jobHistory"]{
 }[0...50] | order(startDate desc)`;
 export default {
   name: "about-page",
-  components: { Heading, TileContainer, HeadingWithCopy, WorkExperience, Comment },
+  components: { Heading, HeadingWithCopy, WorkExperience, Comment },
   data() {
     return {
         workExperience: [],  
