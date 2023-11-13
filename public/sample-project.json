@@ -4,13 +4,13 @@
     "title": "Dodge Garage",
     "subHead": "Website Optimization",
     "slug": "dodge-garage",
-    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "summary": "",
     "comment": "something witty",
     "projectDetails": {
       "client": "Dodge",
       "url": "https://www.dodgegarage.com/",
       "site": "www.dodgegarage.com",
-      "role": "Accessibility Specialist,<br>Front End Developer",
+      "role": "Front End Developer,<br>Accessibility Specialist",
       "date": "2019 to present",
       "software": "Vue.js, jQuery, dotCMS, Angular",
       "mainImage": "/images/dodge/dodge-landing.png",
@@ -45,16 +45,18 @@
   },
   {
     "projectIndex": 2,
-    "title": "Dodge Garage",
-    "slug": "dodge-garage-wrong",
+    "title": "Bpro Auto",
+    "slug": "bpro-auto",
     "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "comment": "something witty",
     "projectDetails": {
-      "client": "Mopar",
-      "role": "Front End Developer",
+      "client": "Dodge",
+      "url": "https://www.dodgegarage.com/",
+      "site": "www.dodgegarage.com",
+      "role": "Accessibility Specialist,<br>Front End Developer",
       "date": "2019 to present",
       "software": "Vue.js, jQuery, dotCMS, Angular",
-      "mainImage": "https://placekitten.com/555/345",
+      "mainImage": "/images/dodge/dodge-landing.png",
       "altText": "some kind of description"
     }
   },
@@ -65,11 +67,13 @@
     "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "comment": "something witty",
     "projectDetails": {
-      "client": "Mopar",
-      "role": "Front End Developer",
+      "client": "Dodge",
+      "url": "https://www.dodgegarage.com/",
+      "site": "www.dodgegarage.com",
+      "role": "Accessibility Specialist,<br>Front End Developer",
       "date": "2019 to present",
       "software": "Vue.js, jQuery, dotCMS, Angular",
-      "mainImage": "https://placekitten.com/555/345",
+      "mainImage": "/images/dodge/dodge-landing.png",
       "altText": "some kind of description"
     }
   }
