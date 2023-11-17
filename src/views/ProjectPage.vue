@@ -1,13 +1,19 @@
 <script setup>
   import Heading from "@/components/Heading.vue"
   import ProjectPreviewCard from "@/components/ProjectPreviewCard.vue"
+  import HeadingWithCopy from "@/components/HeadingWithCopy.vue"
+  import ContactContainer from "@/components/ContactContainer.vue"
+  import ContactForm from "@/components/ContactForm.vue"
 </script>
 
 <template>
   <main>
     <div class="wrapper" v-if="isLoaded">
       <Heading :projectName="cardOutput.projectDetails.client" :heading="cardOutput.title" :subHeading="cardOutput.subHead"/>
-      <ProjectPreviewCard class="tracking-in-expand" :preview="false" :totalProjectCount="totalProjectCount" :cardData="cardOutput" />   
+      <ProjectPreviewCard class="tracking-in-expand" :preview="false" :totalProjectCount="totalProjectCount" :cardData="cardOutput" />
+      <HeadingWithCopy class="tracking-in-expand" heading="Summary" bodyCopy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse." />
+      <ContactContainer  class="tracking-in-expand"/>   
+      <ContactForm  class="tracking-in-expand"/>
     </div>
     <!-- <div v-else class="tracking-in-expand">
       <h1 class="heading-01">
@@ -26,7 +32,7 @@ import axios from "axios"
 
 export default {
   name: "project-page",
-  components: { Heading, ProjectPreviewCard },
+  components: { Heading, ProjectPreviewCard, HeadingWithCopy, ContactForm, ContactContainer },
 
   data() {
     return {
