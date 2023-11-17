@@ -2,8 +2,51 @@
   {
     "projectIndex": 1,
     "title": "Dodge Garage",
-    "subHead": "Website Optimization",
+    "subHead": "Website Optimizations",
     "slug": "dodge-garage",
+    "summary": "Integrating Sanity.io for DGs events involved defining and building structured content, migrating old data, and defining new workflows so that account managers can take ownership of the process",
+    "comment": "Taking work off of the development teams' shoulders",
+    "projectDetails": {
+      "client": "Dodge",
+      "url": "https://www.dodgegarage.com/",
+      "site": "www.dodgegarage.com",
+      "role": "CMS Architect,<br>Front End Developer,<br>Accessibility Specialist",
+      "date": "2019 to present",
+      "software": "Angular, Sanity, Wordpress, PowerMapper",
+      "mainImage": "/images/dodge/dodge-landing.png",
+      "altText": "some kind of description"
+    },
+    "additionalImages": [
+      {
+        "comment": "Code sample from Dodgegarage schema for Sanity Dashboard",
+        "image": "/images/dodge/event-be.png",
+        "altText": "Sanity.io events dashboard for dodge garage",
+        "description": "The first step in the process was defining the schemas for the events in Sanity. This required setting up form elements so that a user could can fill out a form(below) for each event. Leveraging Sanity's predefined types made this a generally straightforward process. "
+      },
+      {
+        "comment": "Sanity dashboard for content editors",
+        "image": "/images/dodge/events-sanity.png",
+        "altText": "Sanity.io events dashboard for dodge garage",
+        "description": "This dashboard streamlined content management by providing a easy to use interface that allowed content editors control over their work. The big pay off for the development team was; complete removal of day&#8209;to&#8209;day content operations on behalf of account managers, minimal maintenance work for developers, reduced turn&#8209;around&#8209;time on client requests, and allowed the development team to concentrate on higher-level projects."
+      },
+      {
+        "comment": "Events frontend output",
+        "image": "/images/dodge/events-fe.png",
+        "altText": "Sanity.io events dashboard for dodge garage",
+        "description": "This dashboard streamlined content management by providing a user-centric interface that allows content creators control over their work. This autonomy has eliminated the need for developer intervention in day-to-day content operations, reducing maintenance workload and enabling the development team to concentrate on higher-level projects."
+      },
+      {
+        "comment": "Accessibly details view using WAVE chrome extension",
+        "image": "/images/dodge/events-wcag.png",
+        "altText": "Sanity.io events dashboard for dodge garage",
+        "description": "This dashboard streamlined content management by providing a user-centric interface that allows content creators control over their work. This autonomy has eliminated the need for developer intervention in day-to-day content operations, reducing maintenance workload and enabling the development team to concentrate on higher-level projects."
+      }
+    ]
+  },
+  {
+    "projectIndex": 2,
+    "title": "Bpro Auto",
+    "slug": "bpro-auto",
     "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "comment": "something witty",
     "projectDetails": {
@@ -15,47 +58,6 @@
       "software": "Vue.js, jQuery, dotCMS, Angular",
       "mainImage": "/images/dodge/dodge-landing.png",
       "altText": "some kind of description"
-    },
-    "additionalImages": [
-      {
-        "comment": "Sanity dashboard for content creators",
-        "image": "/images/dodge/events-sanity.png",
-        "altText": "Sanity.io events dashboard for dodge garage",
-        "description": "This dashboard streamlined content management by providing a user-centric interface that allows content creators control over their work. This autonomy has eliminated the need for developer intervention in day-to-day content operations, reducing maintenance workload and enabling the development team to concentrate on higher-level projects."
-      },
-      {
-        "comment": "Sanity dashboard for content creators",
-        "image": "/images/dodge/event-be.png",
-        "altText": "Sanity.io events dashboard for dodge garage",
-        "description": "This dashboard streamlined content management by providing a user-centric interface that allows content creators control over their work. This autonomy has eliminated the need for developer intervention in day-to-day content operations, reducing maintenance workload and enabling the development team to concentrate on higher-level projects."
-      },
-      {
-        "comment": "Sanity dashboard for content creators",
-        "image": "/images/dodge/events-fe.png",
-        "altText": "Sanity.io events dashboard for dodge garage",
-        "description": "This dashboard streamlined content management by providing a user-centric interface that allows content creators control over their work. This autonomy has eliminated the need for developer intervention in day-to-day content operations, reducing maintenance workload and enabling the development team to concentrate on higher-level projects."
-      },
-      {
-        "comment": "Sanity dashboard for content creators",
-        "image": "/images/dodge/events-wcag.png",
-        "altText": "Sanity.io events dashboard for dodge garage",
-        "description": "This dashboard streamlined content management by providing a user-centric interface that allows content creators control over their work. This autonomy has eliminated the need for developer intervention in day-to-day content operations, reducing maintenance workload and enabling the development team to concentrate on higher-level projects."
-      }
-    ]
-  },
-  {
-    "projectIndex": 2,
-    "title": "Dodge Garage",
-    "slug": "dodge-garage-wrong",
-    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "comment": "something witty",
-    "projectDetails": {
-      "client": "Mopar",
-      "role": "Front End Developer",
-      "date": "2019 to present",
-      "software": "Vue.js, jQuery, dotCMS, Angular",
-      "mainImage": "https://placekitten.com/555/345",
-      "altText": "some kind of description"
     }
   },
   {
@@ -65,11 +67,13 @@
     "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "comment": "something witty",
     "projectDetails": {
-      "client": "Mopar",
-      "role": "Front End Developer",
+      "client": "Dodge",
+      "url": "https://www.dodgegarage.com/",
+      "site": "www.dodgegarage.com",
+      "role": "Accessibility Specialist,<br>Front End Developer",
       "date": "2019 to present",
       "software": "Vue.js, jQuery, dotCMS, Angular",
-      "mainImage": "https://placekitten.com/555/345",
+      "mainImage": "/images/dodge/dodge-landing.png",
       "altText": "some kind of description"
     }
   }
