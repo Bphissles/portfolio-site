@@ -1,8 +1,6 @@
 <template>
   <div class="horizontal-display-container">
-    <p class="heading-03 underline" v-for="data in sampleData">
-      <a :href="data.link" target="_blank"><i :class="data.icon"></i> {{ data.title }}</a>
-    </p>
+      <a :href="data.link" target="_blank" class="heading-03 underline"  v-for="data in sampleData"><i :class="data.icon"></i> {{ data.title }}</a>
   </div>
 </template>
 
@@ -21,6 +19,11 @@ export default {
           icon: 'fa-brands fa-github',
           title: 'Github',
           link: 'https://github.com/Bphissles?tab=repositories'
+        },
+        {
+          icon: 'far fa-hand-spock fa-spin',
+          title: 'bold.pro',
+          link: 'https://bold.pro/my/benjamin-hislop'
         }
       ]
     }
@@ -32,5 +35,6 @@ export default {
 .horizontal-display-container {
   display: flex;
   gap: 15px;
+  margin-bottom: 28px;
 }
 </style>
