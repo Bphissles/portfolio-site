@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       isLoaded: false,
-      extraCardTemp: 6,
+      extraCardTemp: 3,
       totalProjectCount: 3,
       cardOutput:{}
     };
