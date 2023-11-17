@@ -52,6 +52,16 @@ export default {
 <style lang="scss" scoped>
 .card {
   margin-bottom: 72px;
+  .details {
+      display: flex;
+      flex-direction: column;
+      width: max-content;
+      // margin-left: auto;
+      p {
+        display: flex;
+        gap: 10px;
+      }
+    }
   .top {
     margin-bottom: 24px;
     .comment {
@@ -82,14 +92,7 @@ export default {
   @media (min-width: 640px) {
     margin-bottom: 48px;
     .details {
-      display: flex;
-      flex-direction: column;
-      width: max-content;
       margin-left: auto;
-      p {
-        display: flex;
-        gap: 10px;
-      }
     }
   }
 
