@@ -8,7 +8,13 @@ import { RouterLink } from "vue-router";
       <img src="../assets/images/system/logo.png" alt="Ben Hislop" />
     </RouterLink>
     <div class="nav-links">
-      <p class="">
+      <p>
+        <RouterLink to="/binary-adder">Binary Adder</RouterLink>
+      </p>
+      <p>
+        <RouterLink to="/calculator">Calculator</RouterLink>
+      </p>
+      <!-- <p class="">
         <RouterLink to="/">Projects</RouterLink> <i class="arrow"></i>
       </p>
       <p class="">
@@ -16,7 +22,7 @@ import { RouterLink } from "vue-router";
       </p>
       <p class="">
         <RouterLink to="/contact">Contact</RouterLink> <i class="arrow"></i>
-      </p>
+      </p> -->
     </div>
   </nav>
 </template>

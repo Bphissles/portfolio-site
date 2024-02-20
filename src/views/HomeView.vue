@@ -8,7 +8,7 @@
     <h1 class="heading-01 red text-center" style="margin-bottom: 0">SITE IN PROGRESS</h1>
     <br>
     <div class="wrapper">
-      <Heading projectName="" heading="Yo, my name is Benjamin Hislop." subHeading="I code cool things."/>
+      <Heading projectName="" heading="This is the project site" subHeading="We make things."/>
       <!-- <div class="todo-block">
         <div>
           <ul>
@@ -18,12 +18,12 @@
         </div>
       </div> -->
 
-      <template v-if="isLoaded">
-        <!-- *we only want to show the first 3 from the list here -->
+      <!-- *we only want to show the first 3 from the list here -->
+      <!-- <template v-if="isLoaded">
         <ProjectPreviewCard class="tracking-in-expand" :preview="true" :totalProjectCount="totalProjectCount" :cardData="cardOutput[0]" />
         <ProjectPreviewCard class="tracking-in-expand" :preview="true" :totalProjectCount="totalProjectCount" :cardData="cardOutput[1]" />
         <ProjectPreviewCard class="tracking-in-expand" :preview="true" :totalProjectCount="totalProjectCount" :cardData="cardOutput[2]" />
-      </template>
+      </template> -->
       <!-- <TileContainer class="tracking-in-expand" heading="More Cool Things." :cardCount="extraCardTemp" /> -->
     </div>
   </main>
