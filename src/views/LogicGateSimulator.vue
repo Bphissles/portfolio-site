@@ -39,7 +39,6 @@ const calculateOutput = () => {
     case 'NOR':
       result = !inputs.some(input => input.value === 'high');
       break;
-    // Add other gates as needed
   }
   output.value = `Output is: <span class="green">${result ? 'High' : 'Low'}</span>`;
 };
