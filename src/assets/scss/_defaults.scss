@@ -27,9 +27,44 @@ body {
     line-height: 21px;
   }
 
+  .input-block {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button {
+    padding: 8px 16px;
+    margin-top: 16px;
+    background-color: $neutral-300;
+    color: $neutral-700;
+    border-radius: 6px;
+    font-family: 'space-mono-regular', serif;
+    letter-spacing: -0.01em;
+    font-size: 24px;
+    line-height: 21px;
+  }
+
   .wrapper {
     padding-inline: 30px;
     padding-bottom: 30px;
+  }
+
+  .code-snippet-container {
+    background: black;
+    .heading-wrap {
+      padding: .125rem 1rem;
+      background-color: $neutral-400;
+      p {
+        color: $accent-green;
+        margin-bottom: 0;
+      }
+    }
+  
+    .code-snippet {
+      overflow-x: scroll;
+    }
   }
 
   @media (min-width: 640px) {

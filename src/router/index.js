@@ -5,6 +5,8 @@ import ContactPage from "../views/ContactPage.vue";
 import ProjectPage from "../views/ProjectPage.vue";
 import BinaryAdder from "../views/BinaryAdder.vue";
 import Calculator from "../views/Calculator.vue";
+import NumberConverter from "../views/NumberConverter.vue"
+import LogicGateSimulator from "../views/LogicGateSimulator.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,10 +27,20 @@ const router = createRouter({
       component: Calculator,
     },
     {
-      path: "/about",
-      name: "about",
-      component: AboutPage,
+      path: "/number-converter",
+      name: "NumberConverter",
+      component: NumberConverter,
     },
+    {
+      path: "/logic-gate-simulator",
+      name: "LogicGateSimulator",
+      component: LogicGateSimulator,
+    },
+    // {
+    //   path: "/about",
+    //   name: "about",
+    //   component: AboutPage,
+    // }
     {
       path: "/project/:project",
       name: "project",
@@ -38,12 +50,12 @@ const router = createRouter({
       path: "/contact",
       name: "contact",
       component: ContactPage
-    },
-    {
-      path: "/style-guide",
-      name: "Style Guide",
-      component: () => import("../views/StyleGuide.vue"),
-    },
+    }
+    // {
+    //   path: "/style-guide",
+    //   name: "Style Guide",
+    //   component: () => import("../views/StyleGuide.vue"),
+    // },
   ],
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {

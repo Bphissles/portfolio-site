@@ -5,23 +5,29 @@ import { RouterLink } from "vue-router";
 <template>
   <nav id="main-nav">
     <RouterLink to="/">
-      <img src="../assets/images/system/logo.png" alt="Ben Hislop" />
+      <img src="../assets/images/system/sample-icon.png" alt="Ben Hislop" width="125"  />
     </RouterLink>
     <div class="nav-links">
+      <p>
+        <RouterLink to="/calculator">Calculator</RouterLink>
+      </p>
       <p>
         <RouterLink to="/binary-adder">Binary Adder</RouterLink>
       </p>
       <p>
-        <RouterLink to="/calculator">Calculator</RouterLink>
+        <RouterLink to="/number-converter">Number Converter</RouterLink>
+      </p>
+      <p>
+        <RouterLink to="/logic-gate-simulator">Gate Simulator</RouterLink>
+      </p>
+      <!-- <p class="">
+        <RouterLink to="/about">About</RouterLink> <i class="arrow"></i>
+      </p> -->
+      <p class="">
+        <RouterLink to="/contact">Contact</RouterLink> <i class="arrow"></i>
       </p>
       <!-- <p class="">
         <RouterLink to="/">Projects</RouterLink> <i class="arrow"></i>
-      </p>
-      <p class="">
-        <RouterLink to="/about">About</RouterLink> <i class="arrow"></i>
-      </p>
-      <p class="">
-        <RouterLink to="/contact">Contact</RouterLink> <i class="arrow"></i>
       </p> -->
     </div>
   </nav>

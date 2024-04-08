@@ -10,21 +10,21 @@ export default {
   data() {
     return {
       sampleData: [
-        {
-          icon: 'fa-brands fa-linkedin',
-          title: 'LinkedIn',
-          link: 'https://www.linkedin.com/in/benjaminhislop/'
-        },
+        // {
+        //   icon: 'fa-brands fa-linkedin',
+        //   title: 'LinkedIn',
+        //   link: 'https://www.linkedin.com/in/benjaminhislop/'
+        // },
         {
           icon: 'fa-brands fa-github',
           title: 'Github',
           link: 'https://github.com/Bphissles?tab=repositories'
-        },
-        {
-          icon: 'far fa-hand-spock fa-spin',
-          title: 'bold.pro',
-          link: 'https://bold.pro/my/benjamin-hislop'
         }
+        // {
+        //   icon: 'far fa-hand-spock fa-spin',
+        //   title: 'bold.pro',
+        //   link: 'https://bold.pro/my/benjamin-hislop'
+        // }
       ]
     }
   }

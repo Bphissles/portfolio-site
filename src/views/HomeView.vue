@@ -5,10 +5,14 @@
 
 <template>
   <main>
-    <h1 class="heading-01 red text-center" style="margin-bottom: 0">SITE IN PROGRESS</h1>
-    <br>
     <div class="wrapper">
-      <Heading projectName="" heading="This is the project site" subHeading="We make things."/>
+      <Heading projectName="" heading="Group1" subHeading="Select a project from the navigation"/>
+      <h1 class="heading-03">
+        <span class="orange">Jim Ponce Estrada</span><br>
+        <span class="green">Paul Gullatte</span><br>
+        <span class="blue">Benjamin Hislop</span><br>
+        <span class="red">Rylin Quintana</span>
+      </h1>
       <!-- <div class="todo-block">
         <div>
           <ul>
