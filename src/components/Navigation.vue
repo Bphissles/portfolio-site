@@ -20,6 +20,9 @@ import { RouterLink } from "vue-router";
       <p>
         <RouterLink to="/logic-gate-simulator">Gate Simulator</RouterLink>
       </p>
+      <p>
+        <RouterLink to="/flash-cards">Flash Cards</RouterLink>
+      </p>
       <!-- <p class="">
         <RouterLink to="/about">About</RouterLink> <i class="arrow"></i>
       </p> -->

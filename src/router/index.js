@@ -7,6 +7,7 @@ import BinaryAdder from "../views/BinaryAdder.vue";
 import Calculator from "../views/Calculator.vue";
 import NumberConverter from "../views/NumberConverter.vue"
 import LogicGateSimulator from "../views/LogicGateSimulator.vue"
+import FlashCardQuiz from "../views/FlashCardQuiz.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,11 +37,16 @@ const router = createRouter({
       name: "LogicGateSimulator",
       component: LogicGateSimulator,
     },
+    {
+      path: "/flash-cards",
+      name: "FlashCardQuiz",
+      component: FlashCardQuiz,
+    },
     // {
     //   path: "/about",
     //   name: "about",
     //   component: AboutPage,
-    // }
+    // },
     {
       path: "/project/:project",
       name: "project",
