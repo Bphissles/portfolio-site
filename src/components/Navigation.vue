@@ -23,12 +23,15 @@ import { RouterLink } from "vue-router";
       <p>
         <RouterLink to="/flash-cards">Flash Cards</RouterLink>
       </p>
+      <p>
+        <RouterLink to="/traffic-light-controller">Traffic Light Controller</RouterLink>
+      </p>
       <!-- <p class="">
         <RouterLink to="/about">About</RouterLink> <i class="arrow"></i>
       </p> -->
-      <p class="">
+      <!-- <p class="">
         <RouterLink to="/contact">Contact</RouterLink> <i class="arrow"></i>
-      </p>
+      </p> -->
       <!-- <p class="">
         <RouterLink to="/">Projects</RouterLink> <i class="arrow"></i>
       </p> -->

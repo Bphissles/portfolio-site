@@ -71,57 +71,66 @@ const handleSubmit = () => {
     </div>
     <div class="code-snippet">
       <pre>
-        // Collect User Inputs
+        // Add an event listener to the form with the ID 'binaryAdderForm'. This triggers when the form is submitted.
         document.getElementById('binaryAdderForm').addEventListener('submit', function(event) {
-          //prevent page reload from form submission
-          event.preventDefault(); 
+            // Prevent the default form submission behavior, which typically reloads the page.
+            event.preventDefault(); 
 
-          // assign user input to variables
-          const binary1 = document.getElementById('binary1').value;
-          const binary2 = document.getElementById('binary2').value;
+            // Retrieve the values entered by the user in the input fields with IDs 'binary1' and 'binary2'.
+            const binary1 = document.getElementById('binary1').value;
+            const binary2 = document.getElementById('binary2').value;
 
-          const { result, steps } = addBinary(binary1, binary2);
-          
-          // output results to page
-          document.getElementById('result').textContent = `Result: ${result}`;
-          document.getElementById('steps').innerHTML = steps.join('/n');
+            // Call the addBinary function with the user inputs and destructure the returned object to get 'result' and 'steps'.
+            const { result, steps } = addBinary(binary1, binary2);
+            
+            // Display the resulting binary addition in the DOM element with the ID 'result'.
+            document.getElementById('result').textContent = `Result: ${result}`;
+            // Display the steps of the binary addition in the DOM element with the ID 'steps', each step separated by a newline.
+            document.getElementById('steps').innerHTML = steps.join('/n');
         });
 
-        // where the magic happens
+        // Define the function to add two binary numbers.
         function addBinary(a, b) {
-          // a is first input
-          // b is second input
-          let i = a.length - 1;
-          let j = b.length - 1;
-          let carry = 0;
-          let result = '';
-          let steps = []; // Array to hold each step
+            // Initialize indices for the last characters in the input strings.
+            let i = a.length - 1;
+            let j = b.length - 1;
+            // Initialize the carry used in binary addition to 0.
+            let carry = 0;
+            // Initialize the result string for the binary sum.
+            let result = '';
+            // Array to store the step-by-step details of the addition process.
+            let steps = [];
 
-          while (i >= 0 || j >= 0) {
-              let sum = carry;
-              if (i >= 0) {
-                  sum += a[i] === '1' ? 1 : 0;
-                  i--;
-              }
-              if (j >= 0) {
-                  sum += b[j] === '1' ? 1 : 0;
-                  j--;
-              }
-              carry = sum > 1 ? 1 : 0;
+            // Loop through both binary strings from end to start.
+            while (i >= 0 || j >= 0) {
+                let sum = carry; // Start with the current carry value.
+                if (i >= 0) {
+                    sum += a[i] === '1' ? 1 : 0; // Add the value of the current bit from the first binary string.
+                    i--; // Move to the next bit.
+                }
+                if (j >= 0) {
+                    sum += b[j] === '1' ? 1 : 0; // Add the value of the current bit from the second binary string.
+                    j--; // Move to the next bit.
+                }
+                carry = sum > 1 ? 1 : 0; // Update the carry for the next iteration.
 
-              // build array for output to page
-              steps.push(`Adding ${a[i + 1] || 0} and ${b[j + 1] || 0} with carry ${carry}: Sum = ${sum % 2}, New Carry = ${carry}`);
+                // Record the addition process for each step.
+                steps.push(`Adding ${a[i + 1] || 0} and ${b[j + 1] || 0} with carry ${carry}: Sum = ${sum % 2}, New Carry = ${carry}`);
 
-              result = (sum % 2) + result;
-          }
+                // Append the least significant bit of the current sum to the result string.
+                result = (sum % 2) + result;
+            }
 
-          if (carry) {
-              result = '1' + result;
-              steps.push(`Final carry: 1`);
-          }
+            // If there's a carry left after the last addition, prepend it to the result.
+            if (carry) {
+                result = '1' + result;
+                steps.push(`Final carry: 1`);
+            }
 
-          return { result, steps };
+            // Return the final result and the array of steps.
+            return { result, steps };
         }
+
 
       </pre>
     </div>

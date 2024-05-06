@@ -28,6 +28,8 @@ import { ref } from 'vue';
     <p>Card Number: {{ correctAnswers }} / {{ totalCards }}</p>
   </div>
   <hr>
+  <br>
+  <br>
   <Comment class="orange" comment="JS from before Vue.js Integration"/>
   <div class="code-snippet-container">
     <div class="heading-wrap">
@@ -332,7 +334,8 @@ export default {
   background: #f0f0f0; 
   padding: 20px; 
   border-radius: 8px; 
-  color: #000
+  color: #000;
+  min-height: 5rem;
 }
 .button { 
   padding: 10px; 

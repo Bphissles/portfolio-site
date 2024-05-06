@@ -84,11 +84,47 @@ const calculateOutput = () => {
     </div>
     <div class="code-snippet">
       <pre>
-       // Retrieve Logic Gate selection from user
+        // Initialize state variables
+        INITIALIZE alert as false (to handle error states)
+        INITIALIZE selectedGate with default value 'AND'
+        INITIALIZE inputs as a reactive array with one element having value 'high'
+        INITIALIZE output as an empty string
 
-       // Record number of inputs and sign for each input
+        // Function to add a new input to the inputs array
+        FUNCTION addInput
+            ADD a new input with value 'high' to inputs
+            SET alert to false
 
-       // Determine output of gate given input list
+        // Function to remove an input from the inputs array at a specified index
+        FUNCTION removeInput(index)
+            IF length of inputs is greater than 2
+                REMOVE input at given index from inputs
+            ELSE
+                SET alert to true (cannot have less than two inputs)
+
+        // Function to calculate the output based on selected logic gate and current inputs
+        FUNCTION calculateOutput
+            IF number of inputs is less than 2
+                SET alert to true
+                RETURN
+            ENDIF
+
+            INITIALIZE result variable
+
+            // Switch case to handle different logic gate operations
+            SWITCH selectedGate
+                CASE 'AND'
+                    result = CHECK if all inputs are 'high'
+                CASE 'OR'
+                    result = CHECK if at least one input is 'high'
+                CASE 'NAND'
+                    result = NOT(CHECK if all inputs are 'high')
+                CASE 'NOR'
+                    result = NOT(CHECK if at least one input is 'high')
+            ENDSWITCH
+
+            // Set the output message based on the result of the logic gate calculation
+            SET output to "Output is: <span class='green'>{result ? 'High' : 'Low'}</span>"
       </pre>
     </div>
   </div>

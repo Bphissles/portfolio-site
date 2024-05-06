@@ -52,35 +52,40 @@ const calculate = (operation) => {
     </div>
     <div class="code-snippet">
       <pre>
-        // Collect User Inputs
+        // Collects user inputs from input fields, converting them to floating point numbers.
         const num1 = parseFloat(document.getElementById('number1').value);
         const num2 = parseFloat(document.getElementById('number2').value);
-        let result;
+        let result; // Variable to store the result of the arithmetic operation.
 
-        // Use Button Value to Select Operation
+        // Use the value of the 'operation' variable to determine the arithmetic operation to perform.
         switch(operation) {
             case 'add':
+                // If operation is 'add', add the two numbers.
                 result = num1 + num2;
                 break;
             case 'subtract':
+                // If operation is 'subtract', subtract the second number from the first.
                 result = num1 - num2;
                 break;
             case 'multiply':
+                // If operation is 'multiply', multiply the two numbers.
                 result = num1 * num2;
                 break;
             case 'divide':
-                // Check for division by zero
+                // If operation is 'divide', check if the second number is zero to avoid division by zero.
                 if (num2 === 0) {
-                    result = 'Cannot divide by zero';
+                    result = 'Cannot divide by zero'; // Display error message if division by zero is attempted.
                     break;
                 }
+                // Perform division if the second number is not zero.
                 result = num1 / num2;
                 break;
             default:
+                // If the operation does not match any case, set result to an error message.
                 result = 'Invalid operation';
         }
 
-        //output result to page
+        // Output the result to the webpage by setting the text content of the DOM element with the ID 'result'.
         document.getElementById('result').textContent = `Result: ${result}`;
       </pre>
     </div>

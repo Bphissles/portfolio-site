@@ -8,6 +8,7 @@ import Calculator from "../views/Calculator.vue";
 import NumberConverter from "../views/NumberConverter.vue"
 import LogicGateSimulator from "../views/LogicGateSimulator.vue"
 import FlashCardQuiz from "../views/FlashCardQuiz.vue"
+import TrafficLight from "../views/TrafficLight.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -41,6 +42,11 @@ const router = createRouter({
       path: "/flash-cards",
       name: "FlashCardQuiz",
       component: FlashCardQuiz,
+    },
+    {
+      path: "/traffic-light-controller",
+      name: "TrafficLight",
+      component: TrafficLight,
     },
     // {
     //   path: "/about",

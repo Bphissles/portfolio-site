@@ -85,54 +85,56 @@ const convertNumber = (outputType) => {
     </div>
     <div class="code-snippet">
       <pre>
-        // get user inputs
-        document.getElementById('inputNumber')
+        // Retrieve the user input element, although there is no assignment to a variable. This needs correction.
+        document.getElementById('inputNumber');
 
+        // Function to convert a number from decimal to another base
         const fromDecimal = (num, base) => {
-        let conversionSteps = [];
-        if (num === 0) return { result: '0', steps: conversionSteps };
+            let conversionSteps = []; // Array to store steps of the conversion process
+            if (num === 0) return { result: '0', steps: conversionSteps }; // Handle zero separately as it does not require conversion
 
-        let result = '';
-        let digits = '0123456789ABCDEF';
-        let originalNum = num;
+            let result = ''; // String to build the result
+            let digits = '0123456789ABCDEF'; // String containing possible digits for bases up to 16
+            let originalNum = num; // Store the original number for potential use in detailed steps
 
-        // division pattern to reduce and determine new values
-        while (num > 0) {
-          let remainder = num % base;
-          conversionSteps.push(`row information`); //full output removed for formatting
-          result = digits[remainder] + result;
-          num = Math.floor(num / base);
-        }
+            // Convert the number to the specified base
+            while (num > 0) {
+                let remainder = num % base; // Find remainder
+                conversionSteps.push(`row information`); // Placeholder for detailed conversion steps
+                result = digits[remainder] + result; // Build the result string from right to left
+                num = Math.floor(num / base); // Reduce the number for the next iteration
+            }
 
-        return { result, steps: conversionSteps };
-      };
+            return { result, steps: conversionSteps }; // Return the conversion result and the steps
+        };
 
-      // statment to determine which operation to complete
-      const convertNumber = (outputType) => {
-        let outputBase;
-        switch(outputType) {
-          case 'bin': outputBase = 2; break;
-          case 'oct': outputBase = 8; break;
-          case 'hex': outputBase = 16; break;
-          case 'dec': outputBase = 10; break;
-          default: outputBase = 0; break;
-        }
+        // Function to determine the conversion based on the specified output type
+        const convertNumber = (outputType) => {
+            let outputBase; // Variable to store the base for conversion
+            // Determine the base using the output type
+            switch(outputType) {
+                case 'bin': outputBase = 2; break;
+                case 'oct': outputBase = 8; break;
+                case 'hex': outputBase = 16; break;
+                case 'dec': outputBase = 10; break;
+                default: outputBase = 0; break; // Handle invalid output type
+            }
 
-        let decimalNumber = parseInt(inputNumber, 10);
-        //determine if number is valid
-        if(isNaN(decimalNumber) || outputBase === 0) {
-          result = "Invalid Input or Output Type";
-          steps = [];
-        } else {
-          let conversionResult = fromDecimal(decimalNumber, outputBase);
-          result = conversionResult.result;
-          steps = conversionResult.steps;
-        }
-        isComputed = true;
+            let decimalNumber = parseInt(inputNumber, 10); // Parse the input as an integer in base 10
+            // Validate the parsed number and selected base
+            if (isNaN(decimalNumber) || outputBase === 0) {
+                result = "Invalid Input or Output Type"; // Set error message for invalid input
+                steps = [];
+            } else {
+                let conversionResult = fromDecimal(decimalNumber, outputBase); // Convert the number
+                result = conversionResult.result; // Store the result of conversion
+                steps = conversionResult.steps; // Store the conversion steps
+            }
+            isComputed = true; // Flag to indicate that conversion is complete
 
-        // output result
-        document.getElementById('result').textContent = `Result: ${result}`;
-      };
+            // Output the result to the webpage
+            document.getElementById('result').textContent = `Result: ${result}`;
+        };
       </pre>
     </div>
   </div>
